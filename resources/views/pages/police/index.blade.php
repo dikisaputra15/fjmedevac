@@ -205,6 +205,68 @@
             border-color: #1a73e8 !important;
             box-shadow: 0 0 0 2px rgba(26,115,232,0.2) !important;
         }
+
+        /* Responsive image modal (Command Flow) */
+        .image-modal-dialog {
+            width: calc(100vw - 32px);
+            max-width: 1400px !important;
+            height: calc(100vh - 32px);
+            margin: 16px auto;
+        }
+
+        .image-modal-dialog .modal-content {
+            width: 100%;
+            height: 100%;
+            max-height: calc(100vh - 32px);
+            border: 0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .image-modal-dialog .modal-header {
+            flex: 0 0 auto;
+            min-height: 48px;
+            padding: 10px 16px !important;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .image-modal-body {
+            display: flex;
+            flex: 1 1 auto;
+            align-items: center;
+            justify-content: center;
+            min-width: 0;
+            min-height: 0;
+            padding: 16px;
+            overflow: auto;
+            background: #f4f6f8;
+        }
+
+        .image-modal-body img {
+            display: block;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+
+        @media (max-width: 576px) {
+            .image-modal-dialog {
+                width: calc(100vw - 16px);
+                height: calc(100vh - 16px);
+                margin: 8px auto;
+            }
+
+            .image-modal-dialog .modal-content {
+                max-height: calc(100vh - 16px);
+            }
+
+            .image-modal-body {
+                padding: 8px;
+            }
+        }
 </style>
 @endpush
 
@@ -275,6 +337,18 @@
                 <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#level3Modal">
                     <img src="{{ asset('images/Layer4.png') }}" style="width:12px; height:12px;">
                     <small>Township Police Station</small>
+                </button>
+
+                <button type="button" class="btn btn-danger d-flex flex-column align-items-center p-3 {{ request()->is('hospital') ? 'active' : '' }}"
+                    data-bs-toggle="modal" data-bs-target="#policeAreaLayerModal">
+                <img src="{{ asset('images/icon-structure.png') }}" style="width: 20px; height: 20px;">
+                    <small>Police Area Layer</small>
+                </button>
+
+               <button type="button" class="btn btn-danger d-flex flex-column align-items-center p-3 {{ request()->is('hospital') ? 'active' : '' }}"
+                    data-bs-toggle="modal" data-bs-target="#cmdFlowModal">
+                <img src="{{ asset('images/icon-flow.png') }}" style="width: 20px; height: 20px;">
+                    <small>Cmd Flow</small>
                 </button>
 
             </div>
@@ -461,6 +535,57 @@
         <p class="p-modal text-justify">
             Major headquarters departments and national-level police bodies are normally led by senior officers at Police Colonel level or above. Larger or more sensitive national functions may be led at Police Brigadier General level.
         </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="policeAreaLayerModal" tabindex="-1" aria-labelledby="policeAreaLayerLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width:800px;">
+    <div class="modal-content">
+      <div class="modal-header py-2">
+        <div class="d-flex align-items-center gap-2">
+            <img src="{{ asset('images/icon-structure.png') }}" style="width:18px; height:18px;">
+            <h5 class="modal-title mb-0" id="policeAreaLayerLabel">Police Area Layer</h5>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="p-modal text-justify">
+            <strong>1. Strategic Command:</strong> Strategic command is exercised by the MOHA and the Chief of MPF. This level sets policy, force structure, national priorities, command authority, and institutional direction.
+        </p>
+        <p class="p-modal text-justify">
+            <strong>2. Headquarters Command:</strong> Headquarters command is exercised through MPF Headquarters and the two Deputy Chiefs. This level translates strategic direction into administration, policy execution, operational coordination, discipline, training, and national-level supervision.
+        </p>
+        <p class="p-modal text-justify">
+            <strong>3. Functional Command:</strong> Functional command is exercised by national and specialized police departments. These units provide capability in specific mission areas such as investigation, intelligence, border security, narcotics, trafficking, transport security, traffic control, financial crime, and municipal policing.
+        </p>
+        <p class="p-modal text-justify">
+            <strong>4. Territorial Command:</strong> Territorial command is exercised through Nay Pyi Taw, State, Region, District, Township, Police Station, and Police Post layers. This level delivers local law enforcement, public order, incident response, reporting, patrol, investigation, and security presence.
+        </p>
+        <p class="mb-0">
+            <strong>Source:</strong>
+            <a href="https://openjicareport.jica.go.jp/pdf/11821543_03.pdf" target="_blank" rel="noopener noreferrer">
+                JICA Report
+            </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="cmdFlowModal" tabindex="-1" aria-labelledby="cmdFlowLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered image-modal-dialog" style="--img-ratio:1.5;">
+    <div class="modal-content">
+      <div class="modal-header py-2">
+        <div class="d-flex align-items-center gap-2">
+            <img src="{{ asset('images/icon-flow.png') }}" style="width:18px; height:18px;">
+            <h5 class="modal-title mb-0" id="cmdFlowLabel">Command Flow</h5>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body image-modal-body">
+            <img src="{{ asset('images/cmd-flow.png') }}" alt="Police Command Flow">
       </div>
     </div>
   </div>
