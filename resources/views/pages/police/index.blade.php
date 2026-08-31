@@ -1047,8 +1047,11 @@ function addPoliceMarkers(data) {
             }
         });
 
+        const itemName = police.name_police || 'N/A';
+        const detailUrl = `/police/${police.id}/detail`;
+
         const popupContent = `
-            <h5>${police.name_police || 'N/A'}</h5>
+            <h5>${itemName}</h5>
             <strong>Address:</strong>
                 ${police.location || 'N/A'}
                 ${police.city_name || 'N/A'}
@@ -1056,11 +1059,54 @@ function addPoliceMarkers(data) {
                 ${police.province_name || 'N/A'}, Myanmar<br>
             <strong>Phone:</strong> ${police.telephone || 'N/A'}<br>
             <strong>Website:</strong> ${police.website || 'N/A'}<br>
-            ${police.id ? `<a href="/police/${police.id}/detail" class="btn btn-primary btn-sm mt-2" style="color:white;">Read More</a>` : ''}
         `;
 
         marker.addListener('click', () => {
-            infoWindow.setContent(`<div style="font-size:13px; min-width: 200px;">${popupContent}</div>`);
+            const destLat = parseFloat(police.latitude);
+            const destLng = parseFloat(police.longitude);
+            const safeName = itemName.replace(/'/g, "\\'");
+
+            let popupActions = '';
+
+            if (lastClickedLocation && !isNaN(destLat) && !isNaN(destLng)) {
+                const originLat = lastClickedLocation.lat;
+                const originLng = lastClickedLocation.lng;
+
+                popupActions = `
+                    <div style="margin-top:8px;padding-top:8px;border-top:1px solid #eee;display:flex;gap:6px;flex-wrap:wrap;">
+                        <button onclick="showRouteOnMap(${originLat},${originLng},${destLat},${destLng},'${safeName}')"
+                                style="display:inline-flex;align-items:center;gap:5px;background:#1a73e8;color:#fff;border:none;padding:5px 12px;border-radius:6px;font-size:12px;font-weight:600;line-height:18px;cursor:pointer;text-decoration:none;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="3 11 22 2 13 21 11 13 3 11"/>
+                            </svg>
+                            Get Directions
+                        </button>
+                        <a href="${detailUrl}"
+                           style="display:inline-flex;align-items:center;gap:5px;background:#395272;color:#fff;text-decoration:none;padding:5px 12px;border-radius:6px;font-size:12px;font-weight:600;line-height:18px;"
+                           onmouseover="this.style.background='#5686c3'"
+                           onmouseout="this.style.background='#395272'">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+                            </svg>
+                            Read More
+                        </a>
+                    </div>`;
+            } else {
+                popupActions = `
+                    <div style="margin-top:8px;padding-top:8px;border-top:1px solid #eee;">
+                        <a href="${detailUrl}"
+                           style="display:inline-flex;align-items:center;gap:5px;background:#395272;color:#fff;text-decoration:none;padding:5px 12px;border-radius:6px;font-size:12px;font-weight:600;line-height:18px;"
+                           onmouseover="this.style.background='#5686c3'"
+                           onmouseout="this.style.background='#395272'">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+                            </svg>
+                            Read More
+                        </a>
+                    </div>`;
+            }
+
+            infoWindow.setContent(`<div style="font-size:13px; min-width:200px;">${popupContent}${popupActions}</div>`);
             infoWindow.open(map, marker);
         });
 
