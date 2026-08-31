@@ -19,6 +19,67 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,.1);
         }
+        /* === Facilities filter list (map panel) === */
+        .facility-list {
+            margin-top: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        .facility-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 1px 6px;
+            border-radius: 5px;
+            transition: background-color .15s ease;
+        }
+        .facility-item:hover {
+            background-color: #f4f7fb;
+        }
+        /* Bootstrap 4 (AdminLTE) sets .form-check-input to position:absolute with a
+           negative left margin, which makes the box overlap the label text here. */
+        .facility-item .form-check-input {
+            position: static;
+            float: none;
+            flex: 0 0 15px;
+            width: 15px;
+            height: 15px;
+            margin: 0;
+            cursor: pointer;
+        }
+        .facility-item .form-check-label {
+            flex: 1 1 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            margin: 0;
+            font-size: 13px;
+            line-height: 18px;
+            color: #333;
+            cursor: pointer;
+        }
+        .facility-item .facility-name.is-all {
+            font-weight: 600;
+        }
+        .facility-item .facility-count {
+            flex: 0 0 auto;
+            min-width: 26px;
+            padding: 1px 6px;
+            border-radius: 10px;
+            background: #eef1f5;
+            color: #555;
+            font-size: 11px;
+            line-height: 16px;
+            font-weight: 600;
+            text-align: center;
+        }
+        .facility-item .form-check-input:checked + .form-check-label .facility-count {
+            background: #e2ecfa;
+            color: #2b5f9e;
+        }
+
         .form-check-scrollable {
             max-height: 150px;
             overflow-y: auto;
@@ -341,6 +402,63 @@
     box-shadow: 0 0 0 2px rgba(26,115,232,0.2) !important;
 }
 
+/* Medical facility modal tabs */
+.medical-modal-dialog {
+    width: 95vw;
+    max-width: 1000px !important;
+}
+.medical-modal-dialog .modal-content {
+    max-height: 88vh;
+    border: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.medical-modal-tabs {
+    flex: 0 0 auto;
+    flex-wrap: nowrap;
+    gap: 2px;
+    padding: 8px 16px 0;
+    overflow-x: auto;
+    background: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+.medical-modal-tabs .nav-link {
+    padding: 8px 14px;
+    border: 1px solid transparent;
+    border-bottom: 0;
+    border-radius: 6px 6px 0 0;
+    color: #55606e;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.medical-modal-tabs .nav-link:hover {
+    background: #eef2f7;
+    color: #395272;
+}
+.medical-modal-tabs .nav-link.active {
+    border-color: #dee2e6 #dee2e6 #fff;
+    background: #fff;
+    color: #395272;
+}
+.medical-modal-body {
+    min-height: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.medical-modal-content {
+    max-height: calc(88vh - 125px);
+    min-height: 260px;
+    padding: 18px 24px 24px;
+    overflow-y: auto;
+}
+.medical-modal-content ul {
+    padding-left: 20px;
+}
+.medical-modal-content li {
+    margin-bottom: 6px;
+}
+
 </style>
 
 @endpush
@@ -350,8 +468,8 @@
 <div class="card">
     <div class="row" style="background-color: #dfeaf1;">
        <div class="col-md-9">
-            <div class="d-flex p-2" style="justify-content: flex-start;">
-                <div class="d-flex" style="gap: 5px;">
+            <div class="d-flex p-3" style="justify-content: flex-start;">
+                <div class="d-flex" style="gap: 80px;">
 
                 <!-- Airport -->
                       <div>
@@ -1135,7 +1253,6 @@
                     <li>Covers only a limited proportion of the population</li>
                     <li>Provides a constrained range of benefits and healthcare services</li>
                 </ul>
-                As a result, a significant proportion of the population in Myanmar continues to rely on direct payments made by individuals to healthcare providers at the time of service, without reimbursement from insurance or government programs.
             </p>
             <h6 class="fw-bold">
                 <b>Social Security Scheme (SSS) Myanmar</b>
@@ -1442,7 +1559,6 @@
                     <li>Covers only a limited proportion of the population</li>
                     <li>Provides a constrained range of benefits and healthcare services</li>
                 </ul>
-                As a result, a significant proportion of the population in Myanmar continues to rely on direct payments made by individuals to healthcare providers at the time of service, without reimbursement from insurance or government programs.
             </p>
             <h6 class="fw-bold">
                 <b>Social Security Scheme (SSS) Myanmar</b>
@@ -1575,6 +1691,9 @@
          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+            <h6 class="fw-bold">
+                <b>Overview</b>
+            </h6>
             <p class="text-justify">
                 A Tertiary Public Hospital in Myanmar represents the highest level of care, typically consisting of major city General Hospitals, Teaching Hospitals, and Specialist Hospitals located in key urban centers including Yangon, Mandalay, and Nay Pyi Taw. These hospitals are national referral centers, managing the most complex and specialized medical conditions while also being hubs for medical education and research.
                 However, a General Hospital is a hospital type rather than a fixed level of care, and is categorized as being either Secondary or Tertiary depending on its bed capacity, clinical capability, specialist, and subspecialist availability, and referral role.
@@ -1680,14 +1799,14 @@
                     <li>
                         <strong>Core and Subspecialties</strong>
                         <ul>
-                            <li>Full range of medical and surgical specialties<li>
+                            <li>Full range of medical and surgical specialties</li>
                             <li>Extensive subspecialty departments across disciplines</li>
                         </ul>
                     </li>
                     <li class="mt-2">
                         <strong>Advanced Tertiary Services </strong>
                         <ul>
-                            <li>Highly specialized procedures (e.g., complex oncology, neurosurgery)<li>
+                            <li>Highly specialized procedures (e.g., complex oncology, neurosurgery)</li>
                             <li>Multidisciplinary care teams</li>
                             <li>Advanced ICU and critical care units</li>
                         </ul>
@@ -1742,7 +1861,7 @@
                     <li>
                         <strong>Specialized Clinical Focus</strong>
                         <ul>
-                            <li>Cardiology / Cardiothoracic services<li>
+                            <li>Cardiology / Cardiothoracic services</li>
                             <li>Oncology services</li>
                             <li>Orthopedic and trauma services</li>
                             <li>Infectious disease management</li>
@@ -1786,7 +1905,6 @@
                     <li>Covers only a limited proportion of the population</li>
                     <li>Provides a constrained range of benefits and healthcare services</li>
                 </ul>
-                As a result, a significant proportion of the population in Myanmar continues to rely on direct payments made by individuals to healthcare providers at the time of service, without reimbursement from insurance or government programs.
             </p>
             <h6 class="fw-bold">
                 <b>Social Security Scheme (SSS) Myanmar</b>
@@ -1834,6 +1952,118 @@
     </div>
   </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const medicalModalIds = [
+        'level11Modal',
+        'level22Modal',
+        'level33Modal',
+        'level44Modal',
+        'level55Modal',
+        'level66Modal'
+    ];
+
+    const tabs = [
+        { key: 'overview', label: 'Overview' },
+        { key: 'role', label: 'Role' },
+        { key: 'clinical-services', label: 'Clinical Services' }
+    ];
+
+    medicalModalIds.forEach(function (modalId) {
+        const modal = document.getElementById(modalId);
+        const body = modal?.querySelector('.modal-body');
+
+        if (!body || body.dataset.medicalTabsInitialized === 'true') return;
+
+        modal.querySelector('.modal-dialog')?.classList.add('medical-modal-dialog');
+
+        const sections = {
+            overview: document.createDocumentFragment(),
+            role: document.createDocumentFragment(),
+            'clinical-services': document.createDocumentFragment()
+        };
+        let activeSection = 'overview';
+
+        Array.from(body.children).forEach(function (element) {
+            const heading = element.textContent.trim().replace(/\s+/g, ' ').toLowerCase();
+
+            if (element.tagName === 'H5') {
+                if (heading === 'myanmar government health insurance') {
+                    activeSection = 'clinical-services';
+                    sections['clinical-services'].appendChild(element);
+                    return;
+                }
+
+                activeSection = 'overview';
+                tabs.forEach(function (tab) {
+                    sections[tab.key].appendChild(element.cloneNode(true));
+                });
+                element.remove();
+                return;
+            }
+
+            if (element.tagName === 'H6' && heading === 'overview') {
+                activeSection = 'overview';
+                element.remove();
+                return;
+            }
+            if (element.tagName === 'H6' && heading === 'role') {
+                activeSection = 'role';
+                element.remove();
+                return;
+            }
+            if (element.tagName === 'H6' && heading === 'clinical services') {
+                activeSection = 'clinical-services';
+                element.remove();
+                return;
+            }
+
+            sections[activeSection].appendChild(element);
+        });
+
+        const tabNav = document.createElement('ul');
+        tabNav.className = 'nav nav-tabs medical-modal-tabs';
+        tabNav.setAttribute('role', 'tablist');
+
+        const tabContent = document.createElement('div');
+        tabContent.className = 'tab-content medical-modal-content';
+
+        tabs.forEach(function (tab, index) {
+            const paneId = `${modalId}-${tab.key}`;
+            const buttonId = `${paneId}-tab`;
+            const navItem = document.createElement('li');
+            navItem.className = 'nav-item';
+            navItem.setAttribute('role', 'presentation');
+            navItem.innerHTML = `
+                <button class="nav-link${index === 0 ? ' active' : ''}"
+                        id="${buttonId}"
+                        data-bs-toggle="tab"
+                        data-bs-target="#${paneId}"
+                        type="button"
+                        role="tab"
+                        aria-controls="${paneId}"
+                        aria-selected="${index === 0 ? 'true' : 'false'}">
+                    ${tab.label}
+                </button>`;
+            tabNav.appendChild(navItem);
+
+            const pane = document.createElement('div');
+            pane.className = `tab-pane fade${index === 0 ? ' show active' : ''}`;
+            pane.id = paneId;
+            pane.setAttribute('role', 'tabpanel');
+            pane.setAttribute('aria-labelledby', buttonId);
+            pane.appendChild(sections[tab.key]);
+            tabContent.appendChild(pane);
+        });
+
+        body.before(tabNav);
+        body.appendChild(tabContent);
+        body.classList.add('medical-modal-body');
+        body.dataset.medicalTabsInitialized = 'true';
+    });
+});
+</script>
 
 @endsection
 
@@ -2756,20 +2986,12 @@ document.addEventListener('change', function(e) {
         totalPolice = 0;
         totalEmbassies = 0;
 
-        // jika tidak ada checkbox dipilih => tampilkan semua
-        const showAllFacilities = facilities.length === 0;
-
-        const showHospital =
-            showAllFacilities || facilities.includes('hospital');
-
-        const showAirport =
-            showAllFacilities || facilities.includes('airport');
-
-        const showPolice =
-            showAllFacilities || facilities.includes('police');
-
-        const showEmbassy =
-            showAllFacilities || facilities.includes('embassy');
+        // hanya facility yang dicentang yang ditampilkan
+        // (checkbox "All" mencentang semuanya sekaligus)
+        const showHospital = facilities.includes('hospital');
+        const showAirport = facilities.includes('airport');
+        const showPolice = facilities.includes('police');
+        const showEmbassy = facilities.includes('embassy');
 
          // === HOSPITALS ===
         if (showHospital) {
@@ -2885,12 +3107,17 @@ document.addEventListener('change', function(e) {
     }
 
     function updateTotalCountDisplay() {
-        document.getElementById('airportCount').textContent = totalAirports;
-        document.getElementById('hospitalCount').textContent = totalHospitals;
-        document.getElementById('policeCount').textContent = totalPolice;
-        document.getElementById('embassyCount').textContent = totalEmbassies;
+        // Panel filter di-attach oleh Google Maps secara async,
+        // jadi elemen counter bisa belum ada saat load pertama.
+        const setCount = (id, value) => {
+            const el = document.getElementById(id);
+            if (el) el.textContent = value;
+        };
 
-        const el = document.getElementById('totalCountDisplay');
+        setCount('airportCount', totalAirports);
+        setCount('hospitalCount', totalHospitals);
+        setCount('policeCount', totalPolice);
+        setCount('embassyCount', totalEmbassies);
     }    // === COMBINED PANEL ===
     const combinedPanelDiv = document.createElement('div');
     combinedPanelDiv.id = 'combinedPanelDiv';
@@ -2948,32 +3175,47 @@ document.addEventListener('change', function(e) {
         <div id="filterPanel" style="padding:0 10px 10px 10px;max-height:52vh;overflow-y:auto;border-top:1px solid #eee;">
             <div style="padding-top:8px;">
             <strong style="font-size:12px;text-transform:uppercase;letter-spacing:0.5px;color:#555;">Facilities</strong>
-                    <div class="form-check">
-                        <input class="form-check-input facility-checkbox" type="checkbox" value="hospital" id="facilityHospital">
-                        <label class="form-check-label" for="facilityHospital">
-                            Medical (<span id="hospitalCount">0</span>)
-                        </label>
-                    </div>
+                    <div class="facility-list">
 
-                    <div class="form-check">
-                        <input class="form-check-input facility-checkbox" type="checkbox" value="airport" id="facilityAirport">
-                        <label class="form-check-label" for="facilityAirport">
-                            Aviation (<span id="airportCount">0</span>)
-                        </label>
-                    </div>
+                        <div class="facility-item">
+                            <input class="form-check-input facility-checkbox" type="checkbox" value="airport" id="facilityAirport" checked>
+                            <label class="form-check-label" for="facilityAirport">
+                                <span class="facility-name">Aviation</span>
+                                <span class="facility-count" id="airportCount">0</span>
+                            </label>
+                        </div>
 
-                    <div class="form-check">
-                        <input class="form-check-input facility-checkbox" type="checkbox" value="police" id="facilityPolice">
-                        <label class="form-check-label" for="facilityPolice">
-                            Police (<span id="policeCount">0</span>)
-                        </label>
-                    </div>
+                        <div class="facility-item">
+                            <input class="form-check-input facility-checkbox" type="checkbox" value="hospital" id="facilityHospital">
+                            <label class="form-check-label" for="facilityHospital">
+                                <span class="facility-name">Medical</span>
+                                <span class="facility-count" id="hospitalCount">0</span>
+                            </label>
+                        </div>
 
-                    <div class="form-check">
-                        <input class="form-check-input facility-checkbox" type="checkbox" value="embassy" id="facilityEmbassy">
-                        <label class="form-check-label" for="facilityEmbassy">
-                            Embassies (<span id="embassyCount">0</span>)
-                        </label>
+                        <div class="facility-item">
+                            <input class="form-check-input facility-checkbox" type="checkbox" value="police" id="facilityPolice">
+                            <label class="form-check-label" for="facilityPolice">
+                                <span class="facility-name">Police</span>
+                                <span class="facility-count" id="policeCount">0</span>
+                            </label>
+                        </div>
+
+                        <div class="facility-item">
+                            <input class="form-check-input facility-checkbox" type="checkbox" value="embassy" id="facilityEmbassy">
+                            <label class="form-check-label" for="facilityEmbassy">
+                                <span class="facility-name">Embassies</span>
+                                <span class="facility-count" id="embassyCount">0</span>
+                            </label>
+                        </div>
+
+                        <div class="facility-item">
+                            <input class="form-check-input" type="checkbox" value="all" id="facilityAll">
+                            <label class="form-check-label" for="facilityAll">
+                                <span class="facility-name is-all">All / Clear All</span>
+                            </label>
+                        </div>
+
                     </div>
 
                     <hr>
@@ -3031,6 +3273,31 @@ document.addEventListener('change', function(e) {
             google.maps.event.addDomListener(combinedPanelDiv, 'touchstart', e => e.stopPropagation());
             google.maps.event.addDomListener(combinedPanelDiv, 'wheel', e => e.stopPropagation());
             map.controls[google.maps.ControlPosition.RIGHT_TOP].push(combinedPanelDiv);
+
+    // === FACILITIES "ALL" CHECKBOX SYNC ===
+    // Didaftarkan pada fase capture SEBELUM listener filter di bawah,
+    // supaya state checkbox sudah tersinkron saat filter dibaca.
+    function syncFacilityAllCheckbox() {
+        const all = document.getElementById('facilityAll');
+        if (!all) return;
+        const boxes = [...document.querySelectorAll('.facility-checkbox')];
+        all.checked = boxes.length > 0 && boxes.every(cb => cb.checked);
+    }
+
+    document.addEventListener('change', e => {
+        if (!e.target) return;
+
+        if (e.target.id === 'facilityAll') {
+            document.querySelectorAll('.facility-checkbox').forEach(cb => {
+                cb.checked = e.target.checked;
+            });
+            return;
+        }
+
+        if (e.target.classList && e.target.classList.contains('facility-checkbox')) {
+            syncFacilityAllCheckbox();
+        }
+    }, true);
 
     // === INIT SELECT2 ===
     setTimeout(() => {
@@ -3132,8 +3399,11 @@ document.addEventListener('click', async (e) => {
 
     // RESET ALL FILTERS (tombol Reset All)
     if (e.target.id === 'resetMapFilter') {
-        // 1) UI reset
+        // 1) UI reset (default: hanya Aviation yang aktif)
         document.querySelectorAll('#filterPanel input[type="checkbox"]').forEach(cb => { cb.checked = false; });
+        const defaultFacility = document.getElementById('facilityAirport');
+        if (defaultFacility) defaultFacility.checked = true;
+        syncFacilityAllCheckbox();
         const provinceSearch = document.getElementById('provinceSearch');
         if (provinceSearch) provinceSearch.value = '';
         const provinceSearchInput = document.getElementById('provinceSearchInput');
@@ -3200,8 +3470,8 @@ document.addEventListener('click', async (e) => {
         totalEmbassies = 0;
         updateTotalCountDisplay();
 
-        // 6) Re-fetch semua data
-        await applyFiltersWithMapControl([], [], [], [], 0, '', '');
+        // 6) Re-fetch data sesuai default (Aviation)
+        await applyFiltersWithMapControl(['airport'], [], [], [], 0, '', '');
 
         e.stopPropagation();
         e.preventDefault();
@@ -3246,8 +3516,15 @@ setTimeout(() => {
 }, 350);
 
     // --- Initial Load ---
-    refreshCurrentFilters();
+    // Tunggu sampai panel filter benar-benar ter-attach ke DOM oleh Google Maps,
+    // supaya default checkbox (Aviation) terbaca oleh getCurrentFiltersFromUI().
+    (function initialLoad() {
+        if (!document.getElementById('facilityAirport')) {
+            setTimeout(initialLoad, 100);
+            return;
+        }
+        refreshCurrentFilters();
+    })();
 </script>
 
 @endpush
-

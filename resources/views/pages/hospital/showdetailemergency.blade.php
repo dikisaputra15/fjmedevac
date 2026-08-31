@@ -371,6 +371,63 @@
         background: #e8f0fe !important;
         border-radius: 6px;
     }
+/* Medical facility modal tabs — match dashboard */
+.medical-modal-dialog {
+    width: 95vw;
+    max-width: 1000px !important;
+}
+.medical-modal-dialog .modal-content {
+    max-height: 88vh;
+    border: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.medical-modal-tabs {
+    flex: 0 0 auto;
+    flex-wrap: nowrap;
+    gap: 2px;
+    padding: 8px 16px 0;
+    overflow-x: auto;
+    background: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+.medical-modal-tabs .nav-link {
+    padding: 8px 14px;
+    border: 1px solid transparent;
+    border-bottom: 0;
+    border-radius: 6px 6px 0 0;
+    color: #55606e;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.medical-modal-tabs .nav-link:hover {
+    background: #eef2f7;
+    color: #395272;
+}
+.medical-modal-tabs .nav-link.active {
+    border-color: #dee2e6 #dee2e6 #fff;
+    background: #fff;
+    color: #395272;
+}
+.medical-modal-body {
+    min-height: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.medical-modal-content {
+    max-height: calc(88vh - 125px);
+    min-height: 260px;
+    padding: 18px 24px 24px;
+    overflow-y: auto;
+}
+.medical-modal-content ul {
+    padding-left: 20px;
+}
+.medical-modal-content li {
+    margin-bottom: 6px;
+}
+
 </style>
 
 @endpush
@@ -1167,7 +1224,6 @@
                     <li>Covers only a limited proportion of the population</li>
                     <li>Provides a constrained range of benefits and healthcare services</li>
                 </ul>
-                As a result, a significant proportion of the population in Myanmar continues to rely on direct payments made by individuals to healthcare providers at the time of service, without reimbursement from insurance or government programs.
             </p>
             <h6 class="fw-bold">
                 <b>Social Security Scheme (SSS) Myanmar</b>
@@ -1474,7 +1530,6 @@
                     <li>Covers only a limited proportion of the population</li>
                     <li>Provides a constrained range of benefits and healthcare services</li>
                 </ul>
-                As a result, a significant proportion of the population in Myanmar continues to rely on direct payments made by individuals to healthcare providers at the time of service, without reimbursement from insurance or government programs.
             </p>
             <h6 class="fw-bold">
                 <b>Social Security Scheme (SSS) Myanmar</b>
@@ -1607,6 +1662,9 @@
          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+            <h6 class="fw-bold">
+                <b>Overview</b>
+            </h6>
             <p class="text-justify">
                 A Tertiary Public Hospital in Myanmar represents the highest level of care, typically consisting of major city General Hospitals, Teaching Hospitals, and Specialist Hospitals located in key urban centers including Yangon, Mandalay, and Nay Pyi Taw. These hospitals are national referral centers, managing the most complex and specialized medical conditions while also being hubs for medical education and research.
                 However, a General Hospital is a hospital type rather than a fixed level of care, and is categorized as being either Secondary or Tertiary depending on its bed capacity, clinical capability, specialist, and subspecialist availability, and referral role.
@@ -1712,14 +1770,14 @@
                     <li>
                         <strong>Core and Subspecialties</strong>
                         <ul>
-                            <li>Full range of medical and surgical specialties<li>
+                            <li>Full range of medical and surgical specialties</li>
                             <li>Extensive subspecialty departments across disciplines</li>
                         </ul>
                     </li>
                     <li class="mt-2">
                         <strong>Advanced Tertiary Services </strong>
                         <ul>
-                            <li>Highly specialized procedures (e.g., complex oncology, neurosurgery)<li>
+                            <li>Highly specialized procedures (e.g., complex oncology, neurosurgery)</li>
                             <li>Multidisciplinary care teams</li>
                             <li>Advanced ICU and critical care units</li>
                         </ul>
@@ -1774,7 +1832,7 @@
                     <li>
                         <strong>Specialized Clinical Focus</strong>
                         <ul>
-                            <li>Cardiology / Cardiothoracic services<li>
+                            <li>Cardiology / Cardiothoracic services</li>
                             <li>Oncology services</li>
                             <li>Orthopedic and trauma services</li>
                             <li>Infectious disease management</li>
@@ -1818,7 +1876,6 @@
                     <li>Covers only a limited proportion of the population</li>
                     <li>Provides a constrained range of benefits and healthcare services</li>
                 </ul>
-                As a result, a significant proportion of the population in Myanmar continues to rely on direct payments made by individuals to healthcare providers at the time of service, without reimbursement from insurance or government programs.
             </p>
             <h6 class="fw-bold">
                 <b>Social Security Scheme (SSS) Myanmar</b>
@@ -1866,6 +1923,118 @@
     </div>
   </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const medicalModalIds = [
+        'level11Modal',
+        'level22Modal',
+        'level33Modal',
+        'level44Modal',
+        'level55Modal',
+        'level66Modal'
+    ];
+
+    const tabs = [
+        { key: 'overview', label: 'Overview' },
+        { key: 'role', label: 'Role' },
+        { key: 'clinical-services', label: 'Clinical Services' }
+    ];
+
+    medicalModalIds.forEach(function (modalId) {
+        const modal = document.getElementById(modalId);
+        const body = modal?.querySelector('.modal-body');
+
+        if (!body || body.dataset.medicalTabsInitialized === 'true') return;
+
+        modal.querySelector('.modal-dialog')?.classList.add('medical-modal-dialog');
+
+        const sections = {
+            overview: document.createDocumentFragment(),
+            role: document.createDocumentFragment(),
+            'clinical-services': document.createDocumentFragment()
+        };
+        let activeSection = 'overview';
+
+        Array.from(body.children).forEach(function (element) {
+            const heading = element.textContent.trim().replace(/\s+/g, ' ').toLowerCase();
+
+            if (element.tagName === 'H5') {
+                if (heading === 'myanmar government health insurance') {
+                    activeSection = 'clinical-services';
+                    sections['clinical-services'].appendChild(element);
+                    return;
+                }
+
+                activeSection = 'overview';
+                tabs.forEach(function (tab) {
+                    sections[tab.key].appendChild(element.cloneNode(true));
+                });
+                element.remove();
+                return;
+            }
+
+            if (element.tagName === 'H6' && heading === 'overview') {
+                activeSection = 'overview';
+                element.remove();
+                return;
+            }
+            if (element.tagName === 'H6' && heading === 'role') {
+                activeSection = 'role';
+                element.remove();
+                return;
+            }
+            if (element.tagName === 'H6' && heading === 'clinical services') {
+                activeSection = 'clinical-services';
+                element.remove();
+                return;
+            }
+
+            sections[activeSection].appendChild(element);
+        });
+
+        const tabNav = document.createElement('ul');
+        tabNav.className = 'nav nav-tabs medical-modal-tabs';
+        tabNav.setAttribute('role', 'tablist');
+
+        const tabContent = document.createElement('div');
+        tabContent.className = 'tab-content medical-modal-content';
+
+        tabs.forEach(function (tab, index) {
+            const paneId = `${modalId}-${tab.key}`;
+            const buttonId = `${paneId}-tab`;
+            const navItem = document.createElement('li');
+            navItem.className = 'nav-item';
+            navItem.setAttribute('role', 'presentation');
+            navItem.innerHTML = `
+                <button class="nav-link${index === 0 ? ' active' : ''}"
+                        id="${buttonId}"
+                        data-bs-toggle="tab"
+                        data-bs-target="#${paneId}"
+                        type="button"
+                        role="tab"
+                        aria-controls="${paneId}"
+                        aria-selected="${index === 0 ? 'true' : 'false'}">
+                    ${tab.label}
+                </button>`;
+            tabNav.appendChild(navItem);
+
+            const pane = document.createElement('div');
+            pane.className = `tab-pane fade${index === 0 ? ' show active' : ''}`;
+            pane.id = paneId;
+            pane.setAttribute('role', 'tabpanel');
+            pane.setAttribute('aria-labelledby', buttonId);
+            pane.appendChild(sections[tab.key]);
+            tabContent.appendChild(pane);
+        });
+
+        body.before(tabNav);
+        body.appendChild(tabContent);
+        body.classList.add('medical-modal-body');
+        body.dataset.medicalTabsInitialized = 'true';
+    });
+});
+</script>
 
 @endsection
 
