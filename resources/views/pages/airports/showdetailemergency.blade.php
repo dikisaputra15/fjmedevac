@@ -2522,12 +2522,10 @@ document.addEventListener('DOMContentLoaded', () => {
             <div id="policeFilter" style="display:none;margin-top:8px;">
                 <strong>Police Category:</strong><br>
                 ${[
-                    'Indonesian National Police (Polri) HQ',
-                    'Provincial Police (Polda)',
-                    'Municipality Police (Polres)',
-                    'District Police (Polsek)',
-                    'Police Mobile Brigade (Brimob)',
-                    'Police Bomb Squad (Gegana)'
+                    'National Police (HQ)',
+                    'State / Region Police Command',
+                    'District Police Command',
+                    'Township Police Station',
                 ].map(cat => `
                     <label style="display:block;font-size:13px;">
                         <input type="checkbox" name="policeCategory" value="${cat}"> ${cat}
