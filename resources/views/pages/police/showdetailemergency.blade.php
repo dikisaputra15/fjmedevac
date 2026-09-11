@@ -362,61 +362,7 @@
         border-radius: 6px;
     }
 /* Medical facility modal tabs — match dashboard */
-.medical-modal-dialog {
-    width: 95vw;
-    max-width: 1000px !important;
-}
-.medical-modal-dialog .modal-content {
-    max-height: 88vh;
-    border: 0;
-    border-radius: 10px;
-    overflow: hidden;
-}
-.medical-modal-tabs {
-    flex: 0 0 auto;
-    flex-wrap: nowrap;
-    gap: 2px;
-    padding: 8px 16px 0;
-    overflow-x: auto;
-    background: #f8f9fa;
-    border-bottom: 1px solid #dee2e6;
-}
-.medical-modal-tabs .nav-link {
-    padding: 8px 14px;
-    border: 1px solid transparent;
-    border-bottom: 0;
-    border-radius: 6px 6px 0 0;
-    color: #55606e;
-    font-size: 13px;
-    font-weight: 600;
-    white-space: nowrap;
-}
-.medical-modal-tabs .nav-link:hover {
-    background: #eef2f7;
-    color: #395272;
-}
-.medical-modal-tabs .nav-link.active {
-    border-color: #dee2e6 #dee2e6 #fff;
-    background: #fff;
-    color: #395272;
-}
-.medical-modal-body {
-    min-height: 0;
-    padding: 0;
-    overflow: hidden;
-}
-.medical-modal-content {
-    max-height: calc(88vh - 125px);
-    min-height: 260px;
-    padding: 18px 24px 24px;
-    overflow-y: auto;
-}
-.medical-modal-content ul {
-    padding-left: 20px;
-}
-.medical-modal-content li {
-    margin-bottom: 6px;
-}
+
 
 </style>
 
@@ -708,42 +654,41 @@
     <div class="modal-content">
       <div class="modal-header">
         <div class="d-flex align-items-center">
-            <img src="{{ asset('images/Layer1.png') }}" style="width:15px; height:15px;">
+            <img src="{{ asset('images/Layer1.png') }}" style="width:15px; height:15px; margin-right:10px; flex-shrink:0;">
             <h5 class="modal-title" id="disclaimerLabel">National Police (HQ)</h5>
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <p class="p-modal text-justify">
-           <b>Command level:</b> National headquarters
+            <b>Command level:</b> National Police Commander
         </p>
         <p class="p-modal text-justify">
-           <b>Head rank:</b> Major General / Lieutenant General level at Chief level
+            <b>Typical Head Rank:</b> Police Lieutenant General or Police Major General
         </p>
         <p class="p-modal text-justify">
-           <b>Subordinate department commander rank:</b> Police Brigadier General / Police Colonel level
+            <b>Role:</b> Highest commander of the MPF
         </p>
         <p class="p-modal text-justify">
-           Myanmar Police Force Headquarters functions as the national command, control, administration, and coordination centre of the MPF. It supports the Chief of Police in exercising command over the entire police force.
+            Functions as the supreme professional and operational leader of the MPF, exercising overall command, control, and administration of the national police organization under the authority of the MOHA. The Chief is responsible for formulating policing strategies, directing nationwide law enforcement and internal security operations, overseeing organizational management and personnel, coordinating territorial and specialized police commands, and ensuring the implementation of government policies, laws, and public security objectives throughout Myanmar.
         </p>
         <p class="p-modal text-justify">
-            Headquarters functions:
+            <b>Responsibilities:</b>
         </p>
         <ul>
-            <li>National command and control</li>
-            <li>Force administration and personnel management</li>
-            <li>Policy and standing-order implementation</li>
-            <li>Operational coordination</li>
-            <li>Criminal and security coordination</li>
-            <li>Training and doctrine development</li>
-            <li>Discipline, morale, and welfare supervision</li>
-            <li>Logistics, supply, finance, and support services</li>
-            <li>International police cooperation</li>
-            <li>Coordination with territorial and specialized police formations</li>
+            <li>Exercises overall command and control of the MPF.</li>
+            <li>Advises the MOHA on policing, public order, and internal security matters.</li>
+            <li>Formulates national policing policies, strategic priorities, and organizational objectives.</li>
+            <li>Directs nationwide law enforcement, crime prevention, criminal investigation, and public security operations.</li>
+            <li>Supervises all territorial police commands, specialized departments, and headquarters directorates.</li>
+            <li>Approves operational plans for major national security incidents, emergencies, and special operations.</li>
+            <li>Oversees police personnel management, including appointments, promotions, discipline, and professional development.</li>
+            <li>Ensures coordination among the MPF, other government ministries, the armed forces (Tatmadaw), and other domestic security agencies, as required.</li>
+            <li>Manages organizational resources, budgeting, logistics, communications, and modernization initiatives.</li>
+            <li>Represents the MPF in official national and international law enforcement engagements.</li>
+            <li>Ensures compliance with applicable laws, regulations, and directives governing police administration and operations.</li>
+            <li>Reports to the MOHA on the operational readiness, effectiveness, and administrative performance of the MPF.</li>
         </ul>
-        <p class="p-modal text-justify">
-            Major headquarters departments and national-level police bodies are normally led by senior officers at Police Colonel level or above. Larger or more sensitive national functions may be led at Police Brigadier General level.
-        </p>
       </div>
     </div>
   </div>
@@ -754,31 +699,37 @@
     <div class="modal-content">
       <div class="modal-header">
         <div class="d-flex align-items-center">
-             <img src="{{ asset('images/Layer2.png') }}" style="width:15px; height:15px;">
+             <img src="{{ asset('images/Layer2.png') }}" style="width:15px; height:15px; margin-right:10px; flex-shrink:0;">
             <h5 class="modal-title" id="disclaimerLabel">State Police Force / Region Police Force</h5>
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <p class="p-modal text-justify">
-            State Police Force / Region Police Force is the main territorial police command below MPF Headquarters. It translates national police policy into State or Region level policing operations and supervises police activity across its assigned territory.
+            <b>Command level:</b> Top territorial police command
         </p>
         <p class="p-modal text-justify">
-            <b>Led by:</b> Police Brigadier General / Police Colonel level officer, depend on the size, location, and operational importance of the State or Region.
+            <b>Typical Head Rank:</b> Police Brigadier General or Police Colonel
         </p>
         <p class="p-modal text-justify">
-            <b>Area of responsibility:</b> One State or one Region. This level corresponds to Myanmar's first-level territorial administration and supervises subordinate District Police Forces, Township Police Forces, police stations, police posts, and police guard posts in the State or Region.
+            <b>Administrative Equivalent:</b> State or region (division) government level
         </p>
         <p class="p-modal text-justify">
-            Myanmar has seven States and seven Regions.
+            Constitutes the highest territorial command of the MPF in a State or Region, implementing national policing policies while directing all law enforcement, public order, criminal investigation, and administrative activities throughout its jurisdiction. State and regional police force is the principal operational link between MPF Headquarters and subordinate district police commands.
+        </p>
+        <p class="p-modal text-justify">
+            <b>Responsibilities:</b>
         </p>
         <ul>
-            <li><b>States:</b> Chin State, Kachin State, Kayah State, Kayin State, Mon State, Rakhine State, and Shan State.</li>
-            <li><b>Regions:</b> Ayeyarwady Region, Bago Region, Magway Region, Mandalay Region, Sagaing Region, Tanintharyi Region, and Yangon Region.</li>
+            <li>Exercises command over all police units within the State or Region.</li>
+            <li>Implements national policing policies and operational directives issued by MPF Headquarters.</li>
+            <li>Coordinates major law enforcement, public security, and crime prevention operations.</li>
+            <li>Supervises district police forces and evaluates their operational performance.</li>
+            <li>Directs responses to major emergencies, disasters, and public order incidents.</li>
+            <li>Coordinates policing activities with the State or Region Government and other public authorities.</li>
+            <li>Oversees personnel administration, logistics, budgeting, and resource allocation within the territorial command.</li>
+            <li>Reports operational, intelligence, and administrative matters to MPF Headquarters.</li>
         </ul>
-        <p class="p-modal text-justify">
-            <b>Responsibilities, role, and functions:</b> State Police Force or Region Police Force is responsible for area level police command and territorial law enforcement coordination. Its functions include public order control, crime prevention, security reporting, investigation support, operational planning, inspection of subordinate units, personnel administration, and coordination with relevant civil administration and security bodies. This level consolidates reports from districts and townships, supervises local police operations, and transmits national level directives from MPF Headquarters to subordinate territorial commands.
-        </p>
       </div>
     </div>
   </div>
@@ -789,27 +740,41 @@
     <div class="modal-content">
       <div class="modal-header">
         <div class="d-flex align-items-center">
-             <img src="{{ asset('images/Layer3.png') }}" style="width:15px; height:15px;">
+             <img src="{{ asset('images/Layer3.png') }}" style="width:15px; height:15px; margin-right:10px; flex-shrink:0;">
             <h5 class="modal-title" id="disclaimerLabel">District Police Force</h5>
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <p class="p-modal text-justify">
-            District Police Force is the intermediate territorial command between the first-level area command and the Township Police Force. It provides supervision, coordination, reporting, and operational control across several townships in a District.
+            <b>Command level:</b> Second-tier territorial police command
         </p>
         <p class="p-modal text-justify">
-            <b>Led by:</b> Police Lieutenant Colonel level officer.
+            <b>Typical Head Rank:</b> Police Lieutenant Colonel or Police Major
         </p>
         <p class="p-modal text-justify">
-            <b>Area of responsibility:</b> District Police Force is responsible for intermediate territorial police command across one District.
+            <b>Administrative Equivalent:</b> District level
         </p>
         <p class="p-modal text-justify">
-            A District is composed of multiple Townships. Districts sit below the State, Region, Nay Pyi Taw Union Territory, or relevant Self-Administered Area arrangement.
+            Represents the intermediate territorial command responsible for coordinating police operations among multiple township police forces within a district. District Police Forces are classified into two (2) classes depending on the area, population, and development:
         </p>
+        <ul>
+            <li>Commanders of the A Class District Police Forces are Police Lieutenant Colonels.</li>
+            <li>Commanders of the B Class District Police Forces are Police Majors.</li>
+        </ul>
         <p class="p-modal text-justify">
-            <b>Responsibilities, role, and functions:</b> District Police Force coordinates district law enforcement, supervises Township Police Forces, supports criminal investigations, manages public order deployments, consolidates operational reports, monitors local security conditions, and coordinates incidents that affect more than one township. It also ensures that township-level policing follows instructions from the relevant State, Region, Nay Pyi Taw, or Self-Administered Area command.
+            <b>Responsibilities:</b>
         </p>
+        <ul>
+            <li>Commands all township police forces within the district.</li>
+            <li>Coordinates district-wide crime prevention and law enforcement operations.</li>
+            <li>Supervises investigations involving multiple townships or significant criminal cases.</li>
+            <li>Monitors public order and security conditions throughout the district.</li>
+            <li>Allocates personnel and operational resources among township commands.</li>
+            <li>Reviews operational performance and administrative compliance of subordinate units.</li>
+            <li>Coordinates with district administrative authorities and judicial institutions.</li>
+            <li>Reports district policing activities to the State or Regional Police Command.</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -820,49 +785,36 @@
     <div class="modal-content">
       <div class="modal-header">
         <div class="d-flex align-items-center">
-             <img src="{{ asset('images/Layer4.png') }}" style="width:15px; height:15px;">
+             <img src="{{ asset('images/Layer4.png') }}" style="width:15px; height:15px; margin-right:10px; flex-shrink:0;">
             <h5 class="modal-title" id="disclaimerLabel">Township Police Force</h5>
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <p class="p-modal text-justify">
-            The Township Police Force is the main local command layer of the MPF. Connecting District-level supervision with frontline policing and manages the police units that directly serve towns, wards, village tracts, villages, and other local security areas.
+            <b>Command level:</b> Third-tier territorial police command
         </p>
         <p class="p-modal text-justify">
-            <b>Led by:</b> Police Major / Police Captain-level officer.
+            <b>Typical Head Rank:</b> Police Major or Police Captain and can also be commanded by a Police Lieutenant
         </p>
         <p class="p-modal text-justify">
-            <b>Area of responsibility:</b> The Township Police Force is responsible for local police command in one Township.
+            <b>Administrative Equivalent:</b> Township level
         </p>
         <p class="p-modal text-justify">
-            A Township may include towns, wards, village tracts, villages, roads, public facilities, local security points, Police Stations, Police Posts, and Police Guard Posts.
+            Embodies the primary operational police command responsible for delivering day-to-day policing services in a township. Township police force directs routine law enforcement, criminal investigations, patrol operations, public safety activities, and the supervision of police stations and outposts within its jurisdiction.
         </p>
         <p class="p-modal text-justify">
-            <b>Responsibilities, role, and functions:</b> The Township Police Force supervises Police Stations, Police Posts, and Police Guard Posts; coordinates patrols; receives crime and incident reports; supports investigations; manages local public-order operations; deploys personnel to checkpoints or guard duties; and reports operational developments to the District Police Force. It is the key command layer for managing police presence across both urban and rural areas.
-        </p>
-        <p class="p-modal text-justify">
-            <b>Frontline Police Level:</b> Frontline police are the lowest operational layer of the Myanmar Police Force, including Police Stations, Police Posts, and Police Guard Posts. They are the first point of contact for local law enforcement matters and responsible for incident response, crime reporting, patrol operations, local security, preliminary investigations, checkpoint or guard duties, and immediate reporting to the Township Police Force. This layer provides the MPF’s direct presence at town, ward, village tract, village, facility, checkpoint, and other local security areas.
+            <b>Responsibilities:</b>
         </p>
         <ul>
-            <li>
-                <b>Police Station</b>
-                <p class="p-modal text-justify">
-                    Police Station is the primary frontline police office responsible for routine law enforcement in a defined local area and is the main operational unit below the Township Police Force.
-                </p>
-                <b>Led by:</b> Police Captain / Police Lieutenant-level officer, depend on the station size, location, and operational importance.
-                <b>Area of responsibility:</b> Police Station is responsible for routine law enforcement and public police services in its assigned jurisdiction.
-                <p class="p-modal text-justify">
-                    Police Station may cover a town area, ward cluster, village tract group, road corridor, facility area, or other defined local policing zone.
-                </p>
-                <b>Responsibilities, role, and functions:</b> A Police Station handles frontline law enforcement, incident response, crime reporting, patrol operations, preliminary investigations, public-order support, detention and case-processing support, local security coordination, and reporting to the Township Police Force. It also serves as the main local point for public complaints, incident registration, criminal case support, and patrol coordination.
-            </li>
-            <li>
-                <b>Police Post / Police Guard Post</b>
-                <p class="p-modal text-justify">
-                    A Police Post or Police Guard Post is a small frontline police presence established to extend police coverage beyond the main Police Station. It supports local security, observation, reporting, and rapid response, but usually has more limited administrative and investigative capacity than a full Police Station
-                </p>
-            </li>
+            <li>Directs routine policing operations throughout the township.</li>
+            <li>Supervises police stations and police outposts.</li>
+            <li>Prevents and investigates criminal offences.</li>
+            <li>Maintains public order and responds to emergencies.</li>
+            <li>Conducts patrols and crime prevention initiatives.</li>
+            <li>Coordinates local intelligence gathering and security monitoring.</li>
+            <li>Cooperates with township administrative authorities and community organizations.</li>
+            <li>Submits operational and administrative reports to the District Police Force.</li>
         </ul>
       </div>
     </div>
@@ -1008,7 +960,7 @@
             </h6>
             <p class="text-justify">
                 <ul>
-                    <li>Bed Capacity, typically <50 beds</li>
+                    <li><strong>Bed Capacity, typically <50 beds</strong></li>
                     <li>
                         <strong>Core Services</strong>
                         <ul>
@@ -1050,7 +1002,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-            <h5 class="fw-bold" style="color:#3c8dbc;">
+            <h5 class="fw-bold" style="color:#000; font-weight:700;">
                 District Hospital (Primary)
             </h5>
             <h6 class="fw-bold">
@@ -1074,7 +1026,7 @@
             </h6>
             <p class="text-justify">
                 <ul>
-                    <li>Bed Capacity, approximately 50–100 beds</li>
+                    <li><strong>Bed Capacity, approximately 50–100 beds</strong></li>
                     <li>
                         <strong>Basic Services</strong>
                         <ul>
@@ -1094,7 +1046,7 @@
             <p class="text-justify">
                 <b><U>Note:</u></b> A District Hospital is classified as Primary when it has limited capability, minimal specialist services, and functions similarly to a large township hospital.
             </p>
-            <h5 class="fw-bold" style="color:#3c8dbc;">
+            <h5 class="fw-bold" style="color:#000; font-weight:700;">
                 Township Hospital (Primary)
             </h5>
             <h6 class="fw-bold">
@@ -1118,7 +1070,7 @@
             </h6>
             <p class="text-justify">
                 <ul>
-                    <li>Bed Capacity, approximately 25–100 beds</li>
+                    <li><strong>Bed Capacity, approximately 25–100 beds</strong></li>
                     <li>
                         <strong>Core Services</strong>
                         <ul>
@@ -1137,7 +1089,7 @@
                     </li>
                 </ul>
             </p>
-            <h5 class="fw-bold" style="color:#3c8dbc;">
+            <h5 class="fw-bold" style="color:#000; font-weight:700;">
                 Station Hospital (Primary)
             </h5>
             <h6 class="fw-bold">
@@ -1161,7 +1113,7 @@
             </h6>
             <p class="text-justify">
                 <ul>
-                    <li>Bed Capacity, approximately 16–25 beds</li>
+                    <li><strong>Bed Capacity, approximately 16–25 beds</strong></li>
                     <li>
                         <strong>Basic Services</strong>
                         <ul>
@@ -1178,59 +1130,6 @@
                         </ul>
                     </li>
                 </ul>
-            </p>
-            <h5 class="fw-bold" style="color:#3c8dbc;">
-                MYANMAR GOVERNMENT HEALTH INSURANCE
-            </h5>
-            <p class="text-justify">
-                Myanmar does not maintain a comprehensive national health insurance system administered by the government. Healthcare coverage remains limited in scope and is not universally accessible. The closest equivalent is the Social Security Scheme (SSS) of Myanmar, which provides the following cover:
-                <ul>
-                    <li>Restricted primarily to formal sector workers</li>
-                    <li>Covers only a limited proportion of the population</li>
-                    <li>Provides a constrained range of benefits and healthcare services</li>
-                </ul>
-            </p>
-            <h6 class="fw-bold">
-                <b>Social Security Scheme (SSS) Myanmar</b>
-            </h6>
-            <p class="text-justify">
-                SSS is a government-administered insurance program that provides health, social, and financial protection to formal-sector employees. It is managed by the Social Security Board (SSB) under the Ministry of Labour, Immigration and Population and constitutes the country’s principal contributory social protection mechanism for workers.
-            </p>
-            <h6 class="fw-bold">
-                <b>Key facts:</b>
-            </h6>
-            <p class="text-justify">
-                <ul>
-                    <li><b>Established:</b> 1954 (restructured under the 2012 Social Security Law)</li>
-                    <li><b>Administering authority:</b> Social Security Board (SSB)</li>
-                    <li><b>Coverage:</b> Employees in public and private sector establishments registered under the scheme</li>
-                    <li><b>Financing:</b> Payroll-based contributions from employers and employees</li>
-                    <li><b>Core benefits: </b> Healthcare services, maternity benefits, sickness allowances, disability benefits, and survivors’ benefits</li>
-                </ul>
-            </p>
-            <h6 class="fw-bold">
-                <b>Legal and institutional background</b>
-            </h6>
-            <p class="text-justify">
-                The scheme was originally established under the Social Security Act of 1954 and subsequently reformed through the 2012 Social Security Law, which aimed to broaden coverage and enhance benefit provisions. The Social Security Board, operating under the Ministry of Labor, Immigration and Population, is responsible for member registration, contribution collection, and benefit administration. It also oversees a network of regional offices and dedicated healthcare facilities serving insured members.
-            </p>
-            <h6 class="fw-bold">
-                <b>Coverage and benefits</b>
-            </h6>
-            <p class="text-justify">
-                SSS applies to employees of registered enterprises employing five or more workers. Contribution rates are generally set at 5% of wages, with 3% contributed by employers and 2% by employees. Covered individuals are entitled to a range of benefits, including medical care, maternity allowances, cash sickness benefits, disability pensions, and funeral grants. Healthcare services are delivered through designated SSB hospitals and clinics, particularly in major urban centers including Yangon and Mandalay.
-            </p>
-            <h6 class="fw-bold">
-                <b>Implementation and challenges</b>
-            </h6>
-            <p class="text-justify">
-                Coverage remains limited to the formal sector, leaving most informal workers outside the scheme. Administrative capacity, awareness, and compliance enforcement have been ongoing challenges. Expansion efforts, including digital registration and pilot programs for informal workers, are gradually extend the protection to a broader labor force.
-            </p>
-            <h6 class="fw-bold">
-                <b>Current role</b>
-            </h6>
-            <p class="text-justify">
-                The Social Security Scheme is Myanmar’s primary state-backed mechanism for worker welfare and risk protection, aligning with national objectives for inclusive social protection and labor rights compliance within the country’s evolving economic framework.
             </p>
       </div>
     </div>
@@ -1272,7 +1171,7 @@
             </h6>
             <p class="text-justify">
                 <ul>
-                    <li>Bed Capacity, typically 50–150 beds</li>
+                    <li><strong>Bed Capacity, typically 50–150 beds</strong></li>
                     <li>
                         <strong>Core Specialties</strong>
                         <ul>
@@ -1316,7 +1215,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-            <h5 class="fw-bold" style="color:#3c8dbc;">
+            <h5 class="fw-bold" style="color:#000; font-weight:700;">
                 General Hospital (Secondary - At the Regional / State or District-Level)
             </h5>
             <h6 class="fw-bold">
@@ -1341,7 +1240,7 @@
             </h6>
             <p class="text-justify">
                 <ul>
-                    <li>Bed Capacity, approximately 100–500 beds</li>
+                    <li><strong>Bed Capacity, approximately 100–500 beds</strong></li>
                     <li>
                         <strong>Core Specialties</strong>
                         <ul>
@@ -1379,7 +1278,7 @@
             <p class="text-justify">
                 <b><U>Note:</u></b> A General Hospital is classified as Secondary when it is a regional (not national) referral center, has limited subspecialty coverage, and lacks the full advanced capabilities of tertiary hospitals.
             </p>
-            <h5 class="fw-bold" style="color:#3c8dbc;">
+            <h5 class="fw-bold" style="color:#000; font-weight:700;">
                 Regional / State Hospital (Secondary)
             </h5>
             <h6 class="fw-bold">
@@ -1404,7 +1303,7 @@
             </h6>
             <p class="text-justify">
                 <ul>
-                    <li>Bed Capacity, approximately 200–500 beds</li>
+                    <li><strong>Bed Capacity, approximately 200–500 beds</strong></li>
                     <li>
                         <strong>Core and Selected Specialties</strong>
                         <ul>
@@ -1432,7 +1331,7 @@
                     </li>
                 </ul>
             </p>
-            <h5 class="fw-bold" style="color:#3c8dbc;">
+            <h5 class="fw-bold" style="color:#000; font-weight:700;">
                 District Hospital (Secondary)
             </h5>
             <h6 class="fw-bold">
@@ -1456,7 +1355,7 @@
             </h6>
             <p class="text-justify">
                 <ul>
-                    <li>Bed Capacity, approximately 100–200+ beds</li>
+                    <li><strong>Bed Capacity, approximately 100–200+ beds</strong></li>
                     <li>
                         <strong>Core Specialties</strong>
                         <ul>
@@ -1484,59 +1383,6 @@
             </p>
             <p class="text-justify">
                 <b><u>Note:</u></b> A District Hospital is classified as Secondary when it has higher bed capacity, expanded clinical services, and a defined referral role for surrounding township hospitals.
-            </p>
-            <h5 class="fw-bold" style="color:#3c8dbc;">
-                MYANMAR GOVERNMENT HEALTH INSURANCE
-            </h5>
-            <p class="text-justify">
-                Myanmar does not maintain a comprehensive national health insurance system administered by the government. Healthcare coverage remains limited in scope and is not universally accessible. The closest equivalent is the Social Security Scheme (SSS) of Myanmar, which provides the following cover:
-                <ul>
-                    <li>Restricted primarily to formal sector workers</li>
-                    <li>Covers only a limited proportion of the population</li>
-                    <li>Provides a constrained range of benefits and healthcare services</li>
-                </ul>
-            </p>
-            <h6 class="fw-bold">
-                <b>Social Security Scheme (SSS) Myanmar</b>
-            </h6>
-            <p class="text-justify">
-                SSS is a government-administered insurance program that provides health, social, and financial protection to formal-sector employees. It is managed by the Social Security Board (SSB) under the Ministry of Labour, Immigration and Population and constitutes the country’s principal contributory social protection mechanism for workers.
-            </p>
-            <h6 class="fw-bold">
-                <b>Key facts:</b>
-            </h6>
-            <p class="text-justify">
-                <ul>
-                    <li><b>Established:</b> 1954 (restructured under the 2012 Social Security Law)</li>
-                    <li><b>Administering authority:</b> Social Security Board (SSB)</li>
-                    <li><b>Coverage:</b> Employees in public and private sector establishments registered under the scheme</li>
-                    <li><b>Financing:</b> Payroll-based contributions from employers and employees</li>
-                    <li><b>Core benefits: </b> Healthcare services, maternity benefits, sickness allowances, disability benefits, and survivors’ benefits</li>
-                </ul>
-            </p>
-            <h6 class="fw-bold">
-                <b>Legal and institutional background</b>
-            </h6>
-            <p class="text-justify">
-                The scheme was originally established under the Social Security Act of 1954 and subsequently reformed through the 2012 Social Security Law, which aimed to broaden coverage and enhance benefit provisions. The Social Security Board, operating under the Ministry of Labor, Immigration and Population, is responsible for member registration, contribution collection, and benefit administration. It also oversees a network of regional offices and dedicated healthcare facilities serving insured members.
-            </p>
-            <h6 class="fw-bold">
-                <b>Coverage and benefits</b>
-            </h6>
-            <p class="text-justify">
-                SSS applies to employees of registered enterprises employing five or more workers. Contribution rates are generally set at 5% of wages, with 3% contributed by employers and 2% by employees. Covered individuals are entitled to a range of benefits, including medical care, maternity allowances, cash sickness benefits, disability pensions, and funeral grants. Healthcare services are delivered through designated SSB hospitals and clinics, particularly in major urban centers including Yangon and Mandalay.
-            </p>
-            <h6 class="fw-bold">
-                <b>Implementation and challenges</b>
-            </h6>
-            <p class="text-justify">
-                Coverage remains limited to the formal sector, leaving most informal workers outside the scheme. Administrative capacity, awareness, and compliance enforcement have been ongoing challenges. Expansion efforts, including digital registration and pilot programs for informal workers, are gradually extend the protection to a broader labor force.
-            </p>
-            <h6 class="fw-bold">
-                <b>Current role</b>
-            </h6>
-            <p class="text-justify">
-                The Social Security Scheme is Myanmar’s primary state-backed mechanism for worker welfare and risk protection, aligning with national objectives for inclusive social protection and labor rights compliance within the country’s evolving economic framework.
             </p>
       </div>
     </div>
@@ -1578,7 +1424,7 @@
             </h6>
             <p class="text-justify">
                 <ul>
-                    <li>Bed Capacity, typically 150–500+ beds</li>
+                    <li><strong>Bed Capacity, typically 150–500+ beds</strong></li>
                     <li>
                         <strong>Core and Advanced Specialties</strong>
                         <ul>
@@ -1637,7 +1483,7 @@
                 In contrast, Secondary General Hospitals are usually smaller (≈50 – 500 beds), provide core specialties with limited subspecialty, and manage moderate-complexity cases while referring advanced cases upward. Secondary General Hospitals typically are regional referral centers and are commonly located at the state/regional or district level.
                 Consistent with Ministry of Health and Sports (MOHS) guidance, classification is determined by service capability and referral function, not by the hospital name itself. A General Hospital is classified as Tertiary when it operates as a high-capability national referral center, and Secondary when it is operating as a regional-level facility with more limited scope of care.
             </p>
-            <h5 class="fw-bold" style="color:#3c8dbc;">
+            <h5 class="fw-bold" style="color:#000; font-weight:700;">
                 General Hospitals (Tertiary - Major City)
             </h5>
             <h6 class="fw-bold">
@@ -1663,7 +1509,7 @@
             </h6>
             <p class="text-justify">
                 <ul>
-                    <li>Bed Capacity, approximately above 500 beds</li>
+                    <li><strong>Bed Capacity, approximately above 500 beds</strong></li>
                     <li>
                         <strong>Core and Subspecialties</strong>
                         <ul>
@@ -1705,7 +1551,7 @@
                     </li>
                 </ul>
             </p>
-            <h5 class="fw-bold" style="color:#3c8dbc;">
+            <h5 class="fw-bold" style="color:#000; font-weight:700;">
                 Teaching Hospital (Tertiary)
             </h5>
             <h6 class="fw-bold">
@@ -1731,7 +1577,7 @@
             </h6>
             <p class="text-justify">
                 <ul>
-                    <li>Bed Capacity, approximately above 500 beds</li>
+                    <li><strong>Bed Capacity, approximately above 500 beds</strong></li>
                     <li>
                         <strong>Core and Subspecialties</strong>
                         <ul>
@@ -1767,7 +1613,7 @@
             <p class="text-justify">
                 <b><u>Note:</u></b> Teaching Hospitals are inherently tertiary due to their academic function, full specialist coverage, and role in national referral and training systems.
             </p>
-            <h5 class="fw-bold" style="color:#3c8dbc;">
+            <h5 class="fw-bold" style="color:#000; font-weight:700;">
                 Specialist Hospital (Tertiary)
             </h5>
             <h6 class="fw-bold">
@@ -1793,7 +1639,7 @@
             </h6>
             <p class="text-justify">
                 <ul>
-                    <li>Bed Capacity, approximately 200 – 800+ beds (varies by specialty)</li>
+                    <li><strong>Bed Capacity, approximately 200 – 800+ beds (varies by specialty)</strong></li>
                     <li>
                         <strong>Specialized Clinical Focus</strong>
                         <ul>
@@ -1831,175 +1677,12 @@
             <p class="text-justify">
                 <b><u>Note:</u></b> Specialist Hospitals are classified as Tertiary due to their highly specialized capability, advanced procedures, and national referral role, even though their scope is narrower than general hospitals.
             </p>
-            <h5 class="fw-bold" style="color:#3c8dbc;">
-                MYANMAR GOVERNMENT HEALTH INSURANCE
-            </h5>
-            <p class="text-justify">
-                Myanmar does not maintain a comprehensive national health insurance system administered by the government. Healthcare coverage remains limited in scope and is not universally accessible. The closest equivalent is the Social Security Scheme (SSS) of Myanmar, which provides the following cover:
-                <ul>
-                    <li>Restricted primarily to formal sector workers</li>
-                    <li>Covers only a limited proportion of the population</li>
-                    <li>Provides a constrained range of benefits and healthcare services</li>
-                </ul>
-            </p>
-            <h6 class="fw-bold">
-                <b>Social Security Scheme (SSS) Myanmar</b>
-            </h6>
-            <p class="text-justify">
-                SSS is a government-administered insurance program that provides health, social, and financial protection to formal-sector employees. It is managed by the Social Security Board (SSB) under the Ministry of Labour, Immigration and Population and constitutes the country’s principal contributory social protection mechanism for workers.
-            </p>
-            <h6 class="fw-bold">
-                <b>Key facts:</b>
-            </h6>
-            <p class="text-justify">
-                <ul>
-                    <li><b>Established:</b> 1954 (restructured under the 2012 Social Security Law)</li>
-                    <li><b>Administering authority:</b> Social Security Board (SSB)</li>
-                    <li><b>Coverage:</b> Employees in public and private sector establishments registered under the scheme</li>
-                    <li><b>Financing:</b> Payroll-based contributions from employers and employees</li>
-                    <li><b>Core benefits: </b> Healthcare services, maternity benefits, sickness allowances, disability benefits, and survivors’ benefits</li>
-                </ul>
-            </p>
-            <h6 class="fw-bold">
-                <b>Legal and institutional background</b>
-            </h6>
-            <p class="text-justify">
-                The scheme was originally established under the Social Security Act of 1954 and subsequently reformed through the 2012 Social Security Law, which aimed to broaden coverage and enhance benefit provisions. The Social Security Board, operating under the Ministry of Labor, Immigration and Population, is responsible for member registration, contribution collection, and benefit administration. It also oversees a network of regional offices and dedicated healthcare facilities serving insured members.
-            </p>
-            <h6 class="fw-bold">
-                <b>Coverage and benefits</b>
-            </h6>
-            <p class="text-justify">
-                SSS applies to employees of registered enterprises employing five or more workers. Contribution rates are generally set at 5% of wages, with 3% contributed by employers and 2% by employees. Covered individuals are entitled to a range of benefits, including medical care, maternity allowances, cash sickness benefits, disability pensions, and funeral grants. Healthcare services are delivered through designated SSB hospitals and clinics, particularly in major urban centers including Yangon and Mandalay.
-            </p>
-            <h6 class="fw-bold">
-                <b>Implementation and challenges</b>
-            </h6>
-            <p class="text-justify">
-                Coverage remains limited to the formal sector, leaving most informal workers outside the scheme. Administrative capacity, awareness, and compliance enforcement have been ongoing challenges. Expansion efforts, including digital registration and pilot programs for informal workers, are gradually extend the protection to a broader labor force.
-            </p>
-            <h6 class="fw-bold">
-                <b>Current role</b>
-            </h6>
-            <p class="text-justify">
-                The Social Security Scheme is Myanmar’s primary state-backed mechanism for worker welfare and risk protection, aligning with national objectives for inclusive social protection and labor rights compliance within the country’s evolving economic framework.
-            </p>
       </div>
     </div>
   </div>
 </div>
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const medicalModalIds = [
-        'level11Modal',
-        'level22Modal',
-        'level33Modal',
-        'level44Modal',
-        'level55Modal',
-        'level66Modal'
-    ];
-
-    const tabs = [
-        { key: 'overview', label: 'Overview' },
-        { key: 'role', label: 'Role' },
-        { key: 'clinical-services', label: 'Clinical Services' }
-    ];
-
-    medicalModalIds.forEach(function (modalId) {
-        const modal = document.getElementById(modalId);
-        const body = modal?.querySelector('.modal-body');
-
-        if (!body || body.dataset.medicalTabsInitialized === 'true') return;
-
-        modal.querySelector('.modal-dialog')?.classList.add('medical-modal-dialog');
-
-        const sections = {
-            overview: document.createDocumentFragment(),
-            role: document.createDocumentFragment(),
-            'clinical-services': document.createDocumentFragment()
-        };
-        let activeSection = 'overview';
-
-        Array.from(body.children).forEach(function (element) {
-            const heading = element.textContent.trim().replace(/\s+/g, ' ').toLowerCase();
-
-            if (element.tagName === 'H5') {
-                if (heading === 'myanmar government health insurance') {
-                    activeSection = 'clinical-services';
-                    sections['clinical-services'].appendChild(element);
-                    return;
-                }
-
-                activeSection = 'overview';
-                tabs.forEach(function (tab) {
-                    sections[tab.key].appendChild(element.cloneNode(true));
-                });
-                element.remove();
-                return;
-            }
-
-            if (element.tagName === 'H6' && heading === 'overview') {
-                activeSection = 'overview';
-                element.remove();
-                return;
-            }
-            if (element.tagName === 'H6' && heading === 'role') {
-                activeSection = 'role';
-                element.remove();
-                return;
-            }
-            if (element.tagName === 'H6' && heading === 'clinical services') {
-                activeSection = 'clinical-services';
-                element.remove();
-                return;
-            }
-
-            sections[activeSection].appendChild(element);
-        });
-
-        const tabNav = document.createElement('ul');
-        tabNav.className = 'nav nav-tabs medical-modal-tabs';
-        tabNav.setAttribute('role', 'tablist');
-
-        const tabContent = document.createElement('div');
-        tabContent.className = 'tab-content medical-modal-content';
-
-        tabs.forEach(function (tab, index) {
-            const paneId = `${modalId}-${tab.key}`;
-            const buttonId = `${paneId}-tab`;
-            const navItem = document.createElement('li');
-            navItem.className = 'nav-item';
-            navItem.setAttribute('role', 'presentation');
-            navItem.innerHTML = `
-                <button class="nav-link${index === 0 ? ' active' : ''}"
-                        id="${buttonId}"
-                        data-bs-toggle="tab"
-                        data-bs-target="#${paneId}"
-                        type="button"
-                        role="tab"
-                        aria-controls="${paneId}"
-                        aria-selected="${index === 0 ? 'true' : 'false'}">
-                    ${tab.label}
-                </button>`;
-            tabNav.appendChild(navItem);
-
-            const pane = document.createElement('div');
-            pane.className = `tab-pane fade${index === 0 ? ' show active' : ''}`;
-            pane.id = paneId;
-            pane.setAttribute('role', 'tabpanel');
-            pane.setAttribute('aria-labelledby', buttonId);
-            pane.appendChild(sections[tab.key]);
-            tabContent.appendChild(pane);
-        });
-
-        body.before(tabNav);
-        body.appendChild(tabContent);
-        body.classList.add('medical-modal-body');
-        body.dataset.medicalTabsInitialized = 'true';
-    });
-});
-</script>
+@include('partials.medical-classification-tabs')
 
 @endsection
 

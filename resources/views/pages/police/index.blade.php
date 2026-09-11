@@ -379,49 +379,36 @@
     <div class="modal-content">
       <div class="modal-header">
         <div class="d-flex align-items-center">
-             <img src="{{ asset('images/Layer4.png') }}" style="width:15px; height:15px;">
+             <img src="{{ asset('images/Layer4.png') }}" style="width:15px; height:15px; margin-right:10px; flex-shrink:0;">
             <h5 class="modal-title" id="disclaimerLabel">Township Police Force</h5>
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <p class="p-modal text-justify">
-            The Township Police Force is the main local command layer of the MPF. Connecting District-level supervision with frontline policing and manages the police units that directly serve towns, wards, village tracts, villages, and other local security areas.
+            <b>Command level:</b> Third-tier territorial police command
         </p>
         <p class="p-modal text-justify">
-            <b>Led by:</b> Police Major / Police Captain-level officer.
+            <b>Typical Head Rank:</b> Police Major or Police Captain and can also be commanded by a Police Lieutenant
         </p>
         <p class="p-modal text-justify">
-            <b>Area of responsibility:</b> The Township Police Force is responsible for local police command in one Township.
+            <b>Administrative Equivalent:</b> Township level
         </p>
         <p class="p-modal text-justify">
-            A Township may include towns, wards, village tracts, villages, roads, public facilities, local security points, Police Stations, Police Posts, and Police Guard Posts.
+            Embodies the primary operational police command responsible for delivering day-to-day policing services in a township. Township police force directs routine law enforcement, criminal investigations, patrol operations, public safety activities, and the supervision of police stations and outposts within its jurisdiction.
         </p>
         <p class="p-modal text-justify">
-            <b>Responsibilities, role, and functions:</b> The Township Police Force supervises Police Stations, Police Posts, and Police Guard Posts; coordinates patrols; receives crime and incident reports; supports investigations; manages local public-order operations; deploys personnel to checkpoints or guard duties; and reports operational developments to the District Police Force. It is the key command layer for managing police presence across both urban and rural areas.
-        </p>
-        <p class="p-modal text-justify">
-            <b>Frontline Police Level:</b> Frontline police are the lowest operational layer of the Myanmar Police Force, including Police Stations, Police Posts, and Police Guard Posts. They are the first point of contact for local law enforcement matters and responsible for incident response, crime reporting, patrol operations, local security, preliminary investigations, checkpoint or guard duties, and immediate reporting to the Township Police Force. This layer provides the MPF’s direct presence at town, ward, village tract, village, facility, checkpoint, and other local security areas.
+            <b>Responsibilities:</b>
         </p>
         <ul>
-            <li>
-                <b>Police Station</b>
-                <p class="p-modal text-justify">
-                    Police Station is the primary frontline police office responsible for routine law enforcement in a defined local area and is the main operational unit below the Township Police Force.
-                </p>
-                <b>Led by:</b> Police Captain / Police Lieutenant-level officer, depend on the station size, location, and operational importance.
-                <b>Area of responsibility:</b> Police Station is responsible for routine law enforcement and public police services in its assigned jurisdiction.
-                <p class="p-modal text-justify">
-                    Police Station may cover a town area, ward cluster, village tract group, road corridor, facility area, or other defined local policing zone.
-                </p>
-                <b>Responsibilities, role, and functions:</b> A Police Station handles frontline law enforcement, incident response, crime reporting, patrol operations, preliminary investigations, public-order support, detention and case-processing support, local security coordination, and reporting to the Township Police Force. It also serves as the main local point for public complaints, incident registration, criminal case support, and patrol coordination.
-            </li>
-            <li>
-                <b>Police Post / Police Guard Post</b>
-                <p class="p-modal text-justify">
-                    A Police Post or Police Guard Post is a small frontline police presence established to extend police coverage beyond the main Police Station. It supports local security, observation, reporting, and rapid response, but usually has more limited administrative and investigative capacity than a full Police Station
-                </p>
-            </li>
+            <li>Directs routine policing operations throughout the township.</li>
+            <li>Supervises police stations and police outposts.</li>
+            <li>Prevents and investigates criminal offences.</li>
+            <li>Maintains public order and responds to emergencies.</li>
+            <li>Conducts patrols and crime prevention initiatives.</li>
+            <li>Coordinates local intelligence gathering and security monitoring.</li>
+            <li>Cooperates with township administrative authorities and community organizations.</li>
+            <li>Submits operational and administrative reports to the District Police Force.</li>
         </ul>
       </div>
     </div>
@@ -433,27 +420,41 @@
     <div class="modal-content">
       <div class="modal-header">
         <div class="d-flex align-items-center">
-             <img src="{{ asset('images/Layer3.png') }}" style="width:15px; height:15px;">
+             <img src="{{ asset('images/Layer3.png') }}" style="width:15px; height:15px; margin-right:10px; flex-shrink:0;">
             <h5 class="modal-title" id="disclaimerLabel">District Police Force</h5>
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <p class="p-modal text-justify">
-            District Police Force is the intermediate territorial command between the first-level area command and the Township Police Force. It provides supervision, coordination, reporting, and operational control across several townships in a District.
+            <b>Command level:</b> Second-tier territorial police command
         </p>
         <p class="p-modal text-justify">
-            <b>Led by:</b> Police Lieutenant Colonel level officer.
+            <b>Typical Head Rank:</b> Police Lieutenant Colonel or Police Major
         </p>
         <p class="p-modal text-justify">
-            <b>Area of responsibility:</b> District Police Force is responsible for intermediate territorial police command across one District.
+            <b>Administrative Equivalent:</b> District level
         </p>
         <p class="p-modal text-justify">
-            A District is composed of multiple Townships. Districts sit below the State, Region, Nay Pyi Taw Union Territory, or relevant Self-Administered Area arrangement.
+            Represents the intermediate territorial command responsible for coordinating police operations among multiple township police forces within a district. District Police Forces are classified into two (2) classes depending on the area, population, and development:
         </p>
+        <ul>
+            <li>Commanders of the A Class District Police Forces are Police Lieutenant Colonels.</li>
+            <li>Commanders of the B Class District Police Forces are Police Majors.</li>
+        </ul>
         <p class="p-modal text-justify">
-            <b>Responsibilities, role, and functions:</b> District Police Force coordinates district law enforcement, supervises Township Police Forces, supports criminal investigations, manages public order deployments, consolidates operational reports, monitors local security conditions, and coordinates incidents that affect more than one township. It also ensures that township-level policing follows instructions from the relevant State, Region, Nay Pyi Taw, or Self-Administered Area command.
+            <b>Responsibilities:</b>
         </p>
+        <ul>
+            <li>Commands all township police forces within the district.</li>
+            <li>Coordinates district-wide crime prevention and law enforcement operations.</li>
+            <li>Supervises investigations involving multiple townships or significant criminal cases.</li>
+            <li>Monitors public order and security conditions throughout the district.</li>
+            <li>Allocates personnel and operational resources among township commands.</li>
+            <li>Reviews operational performance and administrative compliance of subordinate units.</li>
+            <li>Coordinates with district administrative authorities and judicial institutions.</li>
+            <li>Reports district policing activities to the State or Regional Police Command.</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -464,31 +465,37 @@
     <div class="modal-content">
       <div class="modal-header">
         <div class="d-flex align-items-center">
-             <img src="{{ asset('images/Layer2.png') }}" style="width:15px; height:15px;">
+             <img src="{{ asset('images/Layer2.png') }}" style="width:15px; height:15px; margin-right:10px; flex-shrink:0;">
             <h5 class="modal-title" id="disclaimerLabel">State Police Force / Region Police Force</h5>
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <p class="p-modal text-justify">
-            State Police Force / Region Police Force is the main territorial police command below MPF Headquarters. It translates national police policy into State or Region level policing operations and supervises police activity across its assigned territory.
+            <b>Command level:</b> Top territorial police command
         </p>
         <p class="p-modal text-justify">
-            <b>Led by:</b> Police Brigadier General / Police Colonel level officer, depend on the size, location, and operational importance of the State or Region.
+            <b>Typical Head Rank:</b> Police Brigadier General or Police Colonel
         </p>
         <p class="p-modal text-justify">
-            <b>Area of responsibility:</b> One State or one Region. This level corresponds to Myanmar's first-level territorial administration and supervises subordinate District Police Forces, Township Police Forces, police stations, police posts, and police guard posts in the State or Region.
+            <b>Administrative Equivalent:</b> State or region (division) government level
         </p>
         <p class="p-modal text-justify">
-            Myanmar has seven States and seven Regions.
+            Constitutes the highest territorial command of the MPF in a State or Region, implementing national policing policies while directing all law enforcement, public order, criminal investigation, and administrative activities throughout its jurisdiction. State and regional police force is the principal operational link between MPF Headquarters and subordinate district police commands.
+        </p>
+        <p class="p-modal text-justify">
+            <b>Responsibilities:</b>
         </p>
         <ul>
-            <li><b>States:</b> Chin State, Kachin State, Kayah State, Kayin State, Mon State, Rakhine State, and Shan State.</li>
-            <li><b>Regions:</b> Ayeyarwady Region, Bago Region, Magway Region, Mandalay Region, Sagaing Region, Tanintharyi Region, and Yangon Region.</li>
+            <li>Exercises command over all police units within the State or Region.</li>
+            <li>Implements national policing policies and operational directives issued by MPF Headquarters.</li>
+            <li>Coordinates major law enforcement, public security, and crime prevention operations.</li>
+            <li>Supervises district police forces and evaluates their operational performance.</li>
+            <li>Directs responses to major emergencies, disasters, and public order incidents.</li>
+            <li>Coordinates policing activities with the State or Region Government and other public authorities.</li>
+            <li>Oversees personnel administration, logistics, budgeting, and resource allocation within the territorial command.</li>
+            <li>Reports operational, intelligence, and administrative matters to MPF Headquarters.</li>
         </ul>
-        <p class="p-modal text-justify">
-            <b>Responsibilities, role, and functions:</b> State Police Force or Region Police Force is responsible for area level police command and territorial law enforcement coordination. Its functions include public order control, crime prevention, security reporting, investigation support, operational planning, inspection of subordinate units, personnel administration, and coordination with relevant civil administration and security bodies. This level consolidates reports from districts and townships, supervises local police operations, and transmits national level directives from MPF Headquarters to subordinate territorial commands.
-        </p>
       </div>
     </div>
   </div>
@@ -499,42 +506,41 @@
     <div class="modal-content">
       <div class="modal-header">
         <div class="d-flex align-items-center">
-            <img src="{{ asset('images/Layer1.png') }}" style="width:15px; height:15px;">
+            <img src="{{ asset('images/Layer1.png') }}" style="width:15px; height:15px; margin-right:10px; flex-shrink:0;">
             <h5 class="modal-title" id="disclaimerLabel">National Police (HQ)</h5>
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <p class="p-modal text-justify">
-           <b>Command level:</b> National headquarters
+            <b>Command level:</b> National Police Commander
         </p>
         <p class="p-modal text-justify">
-           <b>Head rank:</b> Major General / Lieutenant General level at Chief level
+            <b>Typical Head Rank:</b> Police Lieutenant General or Police Major General
         </p>
         <p class="p-modal text-justify">
-           <b>Subordinate department commander rank:</b> Police Brigadier General / Police Colonel level
+            <b>Role:</b> Highest commander of the MPF
         </p>
         <p class="p-modal text-justify">
-           Myanmar Police Force Headquarters functions as the national command, control, administration, and coordination centre of the MPF. It supports the Chief of Police in exercising command over the entire police force.
+            Functions as the supreme professional and operational leader of the MPF, exercising overall command, control, and administration of the national police organization under the authority of the MOHA. The Chief is responsible for formulating policing strategies, directing nationwide law enforcement and internal security operations, overseeing organizational management and personnel, coordinating territorial and specialized police commands, and ensuring the implementation of government policies, laws, and public security objectives throughout Myanmar.
         </p>
         <p class="p-modal text-justify">
-            Headquarters functions:
+            <b>Responsibilities:</b>
         </p>
         <ul>
-            <li>National command and control</li>
-            <li>Force administration and personnel management</li>
-            <li>Policy and standing-order implementation</li>
-            <li>Operational coordination</li>
-            <li>Criminal and security coordination</li>
-            <li>Training and doctrine development</li>
-            <li>Discipline, morale, and welfare supervision</li>
-            <li>Logistics, supply, finance, and support services</li>
-            <li>International police cooperation</li>
-            <li>Coordination with territorial and specialized police formations</li>
+            <li>Exercises overall command and control of the MPF.</li>
+            <li>Advises the MOHA on policing, public order, and internal security matters.</li>
+            <li>Formulates national policing policies, strategic priorities, and organizational objectives.</li>
+            <li>Directs nationwide law enforcement, crime prevention, criminal investigation, and public security operations.</li>
+            <li>Supervises all territorial police commands, specialized departments, and headquarters directorates.</li>
+            <li>Approves operational plans for major national security incidents, emergencies, and special operations.</li>
+            <li>Oversees police personnel management, including appointments, promotions, discipline, and professional development.</li>
+            <li>Ensures coordination among the MPF, other government ministries, the armed forces (Tatmadaw), and other domestic security agencies, as required.</li>
+            <li>Manages organizational resources, budgeting, logistics, communications, and modernization initiatives.</li>
+            <li>Represents the MPF in official national and international law enforcement engagements.</li>
+            <li>Ensures compliance with applicable laws, regulations, and directives governing police administration and operations.</li>
+            <li>Reports to the MOHA on the operational readiness, effectiveness, and administrative performance of the MPF.</li>
         </ul>
-        <p class="p-modal text-justify">
-            Major headquarters departments and national-level police bodies are normally led by senior officers at Police Colonel level or above. Larger or more sensitive national functions may be led at Police Brigadier General level.
-        </p>
       </div>
     </div>
   </div>

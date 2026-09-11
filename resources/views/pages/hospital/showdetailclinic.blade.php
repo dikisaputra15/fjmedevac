@@ -503,7 +503,7 @@
             </h6>
             <p class="text-justify">
                 <ul>
-                    <li>Bed Capacity, typically <50 beds</li>
+                    <li><strong>Bed Capacity, typically <50 beds</strong></li>
                     <li>
                         <strong>Core Services</strong>
                         <ul>
@@ -545,7 +545,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-            <h5 class="fw-bold" style="color:#3c8dbc;">
+            <h5 class="fw-bold" style="color:#000; font-weight:700;">
                 District Hospital (Primary)
             </h5>
             <h6 class="fw-bold">
@@ -569,7 +569,7 @@
             </h6>
             <p class="text-justify">
                 <ul>
-                    <li>Bed Capacity, approximately 50–100 beds</li>
+                    <li><strong>Bed Capacity, approximately 50–100 beds</strong></li>
                     <li>
                         <strong>Basic Services</strong>
                         <ul>
@@ -589,7 +589,7 @@
             <p class="text-justify">
                 <b><U>Note:</u></b> A District Hospital is classified as Primary when it has limited capability, minimal specialist services, and functions similarly to a large township hospital.
             </p>
-            <h5 class="fw-bold" style="color:#3c8dbc;">
+            <h5 class="fw-bold" style="color:#000; font-weight:700;">
                 Township Hospital (Primary)
             </h5>
             <h6 class="fw-bold">
@@ -613,7 +613,7 @@
             </h6>
             <p class="text-justify">
                 <ul>
-                    <li>Bed Capacity, approximately 25–100 beds</li>
+                    <li><strong>Bed Capacity, approximately 25–100 beds</strong></li>
                     <li>
                         <strong>Core Services</strong>
                         <ul>
@@ -632,7 +632,7 @@
                     </li>
                 </ul>
             </p>
-            <h5 class="fw-bold" style="color:#3c8dbc;">
+            <h5 class="fw-bold" style="color:#000; font-weight:700;">
                 Station Hospital (Primary)
             </h5>
             <h6 class="fw-bold">
@@ -656,7 +656,7 @@
             </h6>
             <p class="text-justify">
                 <ul>
-                    <li>Bed Capacity, approximately 16–25 beds</li>
+                    <li><strong>Bed Capacity, approximately 16–25 beds</strong></li>
                     <li>
                         <strong>Basic Services</strong>
                         <ul>
@@ -673,60 +673,6 @@
                         </ul>
                     </li>
                 </ul>
-            </p>
-            <h5 class="fw-bold" style="color:#3c8dbc;">
-                MYANMAR GOVERNMENT HEALTH INSURANCE
-            </h5>
-            <p class="text-justify">
-                Myanmar does not maintain a comprehensive national health insurance system administered by the government. Healthcare coverage remains limited in scope and is not universally accessible. The closest equivalent is the Social Security Scheme (SSS) of Myanmar, which provides the following cover:
-                <ul>
-                    <li>Restricted primarily to formal sector workers</li>
-                    <li>Covers only a limited proportion of the population</li>
-                    <li>Provides a constrained range of benefits and healthcare services</li>
-                </ul>
-                As a result, a significant proportion of the population in Myanmar continues to rely on direct payments made by individuals to healthcare providers at the time of service, without reimbursement from insurance or government programs.
-            </p>
-            <h6 class="fw-bold">
-                <b>Social Security Scheme (SSS) Myanmar</b>
-            </h6>
-            <p class="text-justify">
-                SSS is a government-administered insurance program that provides health, social, and financial protection to formal-sector employees. It is managed by the Social Security Board (SSB) under the Ministry of Labour, Immigration and Population and constitutes the country’s principal contributory social protection mechanism for workers.
-            </p>
-            <h6 class="fw-bold">
-                <b>Key facts:</b>
-            </h6>
-            <p class="text-justify">
-                <ul>
-                    <li><b>Established:</b> 1954 (restructured under the 2012 Social Security Law)</li>
-                    <li><b>Administering authority:</b> Social Security Board (SSB)</li>
-                    <li><b>Coverage:</b> Employees in public and private sector establishments registered under the scheme</li>
-                    <li><b>Financing:</b> Payroll-based contributions from employers and employees</li>
-                    <li><b>Core benefits: </b> Healthcare services, maternity benefits, sickness allowances, disability benefits, and survivors’ benefits</li>
-                </ul>
-            </p>
-            <h6 class="fw-bold">
-                <b>Legal and institutional background</b>
-            </h6>
-            <p class="text-justify">
-                The scheme was originally established under the Social Security Act of 1954 and subsequently reformed through the 2012 Social Security Law, which aimed to broaden coverage and enhance benefit provisions. The Social Security Board, operating under the Ministry of Labor, Immigration and Population, is responsible for member registration, contribution collection, and benefit administration. It also oversees a network of regional offices and dedicated healthcare facilities serving insured members.
-            </p>
-            <h6 class="fw-bold">
-                <b>Coverage and benefits</b>
-            </h6>
-            <p class="text-justify">
-                SSS applies to employees of registered enterprises employing five or more workers. Contribution rates are generally set at 5% of wages, with 3% contributed by employers and 2% by employees. Covered individuals are entitled to a range of benefits, including medical care, maternity allowances, cash sickness benefits, disability pensions, and funeral grants. Healthcare services are delivered through designated SSB hospitals and clinics, particularly in major urban centers including Yangon and Mandalay.
-            </p>
-            <h6 class="fw-bold">
-                <b>Implementation and challenges</b>
-            </h6>
-            <p class="text-justify">
-                Coverage remains limited to the formal sector, leaving most informal workers outside the scheme. Administrative capacity, awareness, and compliance enforcement have been ongoing challenges. Expansion efforts, including digital registration and pilot programs for informal workers, are gradually extend the protection to a broader labor force.
-            </p>
-            <h6 class="fw-bold">
-                <b>Current role</b>
-            </h6>
-            <p class="text-justify">
-                The Social Security Scheme is Myanmar’s primary state-backed mechanism for worker welfare and risk protection, aligning with national objectives for inclusive social protection and labor rights compliance within the country’s evolving economic framework.
             </p>
       </div>
     </div>
@@ -768,7 +714,7 @@
             </h6>
             <p class="text-justify">
                 <ul>
-                    <li>Bed Capacity, typically 50–150 beds</li>
+                    <li><strong>Bed Capacity, typically 50–150 beds</strong></li>
                     <li>
                         <strong>Core Specialties</strong>
                         <ul>
@@ -812,7 +758,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-            <h5 class="fw-bold" style="color:#3c8dbc;">
+            <h5 class="fw-bold" style="color:#000; font-weight:700;">
                 General Hospital (Secondary - At the Regional / State or District-Level)
             </h5>
             <h6 class="fw-bold">
@@ -837,7 +783,7 @@
             </h6>
             <p class="text-justify">
                 <ul>
-                    <li>Bed Capacity, approximately 100–500 beds</li>
+                    <li><strong>Bed Capacity, approximately 100–500 beds</strong></li>
                     <li>
                         <strong>Core Specialties</strong>
                         <ul>
@@ -875,7 +821,7 @@
             <p class="text-justify">
                 <b><U>Note:</u></b> A General Hospital is classified as Secondary when it is a regional (not national) referral center, has limited subspecialty coverage, and lacks the full advanced capabilities of tertiary hospitals.
             </p>
-            <h5 class="fw-bold" style="color:#3c8dbc;">
+            <h5 class="fw-bold" style="color:#000; font-weight:700;">
                 Regional / State Hospital (Secondary)
             </h5>
             <h6 class="fw-bold">
@@ -900,7 +846,7 @@
             </h6>
             <p class="text-justify">
                 <ul>
-                    <li>Bed Capacity, approximately 200–500 beds</li>
+                    <li><strong>Bed Capacity, approximately 200–500 beds</strong></li>
                     <li>
                         <strong>Core and Selected Specialties</strong>
                         <ul>
@@ -928,7 +874,7 @@
                     </li>
                 </ul>
             </p>
-            <h5 class="fw-bold" style="color:#3c8dbc;">
+            <h5 class="fw-bold" style="color:#000; font-weight:700;">
                 District Hospital (Secondary)
             </h5>
             <h6 class="fw-bold">
@@ -952,7 +898,7 @@
             </h6>
             <p class="text-justify">
                 <ul>
-                    <li>Bed Capacity, approximately 100–200+ beds</li>
+                    <li><strong>Bed Capacity, approximately 100–200+ beds</strong></li>
                     <li>
                         <strong>Core Specialties</strong>
                         <ul>
@@ -980,60 +926,6 @@
             </p>
             <p class="text-justify">
                 <b><u>Note:</u></b> A District Hospital is classified as Secondary when it has higher bed capacity, expanded clinical services, and a defined referral role for surrounding township hospitals.
-            </p>
-            <h5 class="fw-bold" style="color:#3c8dbc;">
-                MYANMAR GOVERNMENT HEALTH INSURANCE
-            </h5>
-            <p class="text-justify">
-                Myanmar does not maintain a comprehensive national health insurance system administered by the government. Healthcare coverage remains limited in scope and is not universally accessible. The closest equivalent is the Social Security Scheme (SSS) of Myanmar, which provides the following cover:
-                <ul>
-                    <li>Restricted primarily to formal sector workers</li>
-                    <li>Covers only a limited proportion of the population</li>
-                    <li>Provides a constrained range of benefits and healthcare services</li>
-                </ul>
-                As a result, a significant proportion of the population in Myanmar continues to rely on direct payments made by individuals to healthcare providers at the time of service, without reimbursement from insurance or government programs.
-            </p>
-            <h6 class="fw-bold">
-                <b>Social Security Scheme (SSS) Myanmar</b>
-            </h6>
-            <p class="text-justify">
-                SSS is a government-administered insurance program that provides health, social, and financial protection to formal-sector employees. It is managed by the Social Security Board (SSB) under the Ministry of Labour, Immigration and Population and constitutes the country’s principal contributory social protection mechanism for workers.
-            </p>
-            <h6 class="fw-bold">
-                <b>Key facts:</b>
-            </h6>
-            <p class="text-justify">
-                <ul>
-                    <li><b>Established:</b> 1954 (restructured under the 2012 Social Security Law)</li>
-                    <li><b>Administering authority:</b> Social Security Board (SSB)</li>
-                    <li><b>Coverage:</b> Employees in public and private sector establishments registered under the scheme</li>
-                    <li><b>Financing:</b> Payroll-based contributions from employers and employees</li>
-                    <li><b>Core benefits: </b> Healthcare services, maternity benefits, sickness allowances, disability benefits, and survivors’ benefits</li>
-                </ul>
-            </p>
-            <h6 class="fw-bold">
-                <b>Legal and institutional background</b>
-            </h6>
-            <p class="text-justify">
-                The scheme was originally established under the Social Security Act of 1954 and subsequently reformed through the 2012 Social Security Law, which aimed to broaden coverage and enhance benefit provisions. The Social Security Board, operating under the Ministry of Labor, Immigration and Population, is responsible for member registration, contribution collection, and benefit administration. It also oversees a network of regional offices and dedicated healthcare facilities serving insured members.
-            </p>
-            <h6 class="fw-bold">
-                <b>Coverage and benefits</b>
-            </h6>
-            <p class="text-justify">
-                SSS applies to employees of registered enterprises employing five or more workers. Contribution rates are generally set at 5% of wages, with 3% contributed by employers and 2% by employees. Covered individuals are entitled to a range of benefits, including medical care, maternity allowances, cash sickness benefits, disability pensions, and funeral grants. Healthcare services are delivered through designated SSB hospitals and clinics, particularly in major urban centers including Yangon and Mandalay.
-            </p>
-            <h6 class="fw-bold">
-                <b>Implementation and challenges</b>
-            </h6>
-            <p class="text-justify">
-                Coverage remains limited to the formal sector, leaving most informal workers outside the scheme. Administrative capacity, awareness, and compliance enforcement have been ongoing challenges. Expansion efforts, including digital registration and pilot programs for informal workers, are gradually extend the protection to a broader labor force.
-            </p>
-            <h6 class="fw-bold">
-                <b>Current role</b>
-            </h6>
-            <p class="text-justify">
-                The Social Security Scheme is Myanmar’s primary state-backed mechanism for worker welfare and risk protection, aligning with national objectives for inclusive social protection and labor rights compliance within the country’s evolving economic framework.
             </p>
       </div>
     </div>
@@ -1075,7 +967,7 @@
             </h6>
             <p class="text-justify">
                 <ul>
-                    <li>Bed Capacity, typically 150–500+ beds</li>
+                    <li><strong>Bed Capacity, typically 150–500+ beds</strong></li>
                     <li>
                         <strong>Core and Advanced Specialties</strong>
                         <ul>
@@ -1131,7 +1023,7 @@
                 In contrast, Secondary General Hospitals are usually smaller (≈50 – 500 beds), provide core specialties with limited subspecialty, and manage moderate-complexity cases while referring advanced cases upward. Secondary General Hospitals typically are regional referral centers and are commonly located at the state/regional or district level.
                 Consistent with Ministry of Health and Sports (MOHS) guidance, classification is determined by service capability and referral function, not by the hospital name itself. A General Hospital is classified as Tertiary when it operates as a high-capability national referral center, and Secondary when it is operating as a regional-level facility with more limited scope of care.
             </p>
-            <h5 class="fw-bold" style="color:#3c8dbc;">
+            <h5 class="fw-bold" style="color:#000; font-weight:700;">
                 General Hospitals (Tertiary - Major City)
             </h5>
             <h6 class="fw-bold">
@@ -1157,7 +1049,7 @@
             </h6>
             <p class="text-justify">
                 <ul>
-                    <li>Bed Capacity, approximately above 500 beds</li>
+                    <li><strong>Bed Capacity, approximately above 500 beds</strong></li>
                     <li>
                         <strong>Core and Subspecialties</strong>
                         <ul>
@@ -1199,7 +1091,7 @@
                     </li>
                 </ul>
             </p>
-            <h5 class="fw-bold" style="color:#3c8dbc;">
+            <h5 class="fw-bold" style="color:#000; font-weight:700;">
                 Teaching Hospital (Tertiary)
             </h5>
             <h6 class="fw-bold">
@@ -1225,7 +1117,7 @@
             </h6>
             <p class="text-justify">
                 <ul>
-                    <li>Bed Capacity, approximately above 500 beds</li>
+                    <li><strong>Bed Capacity, approximately above 500 beds</strong></li>
                     <li>
                         <strong>Core and Subspecialties</strong>
                         <ul>
@@ -1261,7 +1153,7 @@
             <p class="text-justify">
                 <b><u>Note:</u></b> Teaching Hospitals are inherently tertiary due to their academic function, full specialist coverage, and role in national referral and training systems.
             </p>
-            <h5 class="fw-bold" style="color:#3c8dbc;">
+            <h5 class="fw-bold" style="color:#000; font-weight:700;">
                 Specialist Hospital (Tertiary)
             </h5>
             <h6 class="fw-bold">
@@ -1287,7 +1179,7 @@
             </h6>
             <p class="text-justify">
                 <ul>
-                    <li>Bed Capacity, approximately 200 – 800+ beds (varies by specialty)</li>
+                    <li><strong>Bed Capacity, approximately 200 – 800+ beds (varies by specialty)</strong></li>
                     <li>
                         <strong>Specialized Clinical Focus</strong>
                         <ul>
@@ -1325,64 +1217,12 @@
             <p class="text-justify">
                 <b><u>Note:</u></b> Specialist Hospitals are classified as Tertiary due to their highly specialized capability, advanced procedures, and national referral role, even though their scope is narrower than general hospitals.
             </p>
-            <h5 class="fw-bold" style="color:#3c8dbc;">
-                MYANMAR GOVERNMENT HEALTH INSURANCE
-            </h5>
-            <p class="text-justify">
-                Myanmar does not maintain a comprehensive national health insurance system administered by the government. Healthcare coverage remains limited in scope and is not universally accessible. The closest equivalent is the Social Security Scheme (SSS) of Myanmar, which provides the following cover:
-                <ul>
-                    <li>Restricted primarily to formal sector workers</li>
-                    <li>Covers only a limited proportion of the population</li>
-                    <li>Provides a constrained range of benefits and healthcare services</li>
-                </ul>
-                As a result, a significant proportion of the population in Myanmar continues to rely on direct payments made by individuals to healthcare providers at the time of service, without reimbursement from insurance or government programs.
-            </p>
-            <h6 class="fw-bold">
-                <b>Social Security Scheme (SSS) Myanmar</b>
-            </h6>
-            <p class="text-justify">
-                SSS is a government-administered insurance program that provides health, social, and financial protection to formal-sector employees. It is managed by the Social Security Board (SSB) under the Ministry of Labour, Immigration and Population and constitutes the country’s principal contributory social protection mechanism for workers.
-            </p>
-            <h6 class="fw-bold">
-                <b>Key facts:</b>
-            </h6>
-            <p class="text-justify">
-                <ul>
-                    <li><b>Established:</b> 1954 (restructured under the 2012 Social Security Law)</li>
-                    <li><b>Administering authority:</b> Social Security Board (SSB)</li>
-                    <li><b>Coverage:</b> Employees in public and private sector establishments registered under the scheme</li>
-                    <li><b>Financing:</b> Payroll-based contributions from employers and employees</li>
-                    <li><b>Core benefits: </b> Healthcare services, maternity benefits, sickness allowances, disability benefits, and survivors’ benefits</li>
-                </ul>
-            </p>
-            <h6 class="fw-bold">
-                <b>Legal and institutional background</b>
-            </h6>
-            <p class="text-justify">
-                The scheme was originally established under the Social Security Act of 1954 and subsequently reformed through the 2012 Social Security Law, which aimed to broaden coverage and enhance benefit provisions. The Social Security Board, operating under the Ministry of Labor, Immigration and Population, is responsible for member registration, contribution collection, and benefit administration. It also oversees a network of regional offices and dedicated healthcare facilities serving insured members.
-            </p>
-            <h6 class="fw-bold">
-                <b>Coverage and benefits</b>
-            </h6>
-            <p class="text-justify">
-                SSS applies to employees of registered enterprises employing five or more workers. Contribution rates are generally set at 5% of wages, with 3% contributed by employers and 2% by employees. Covered individuals are entitled to a range of benefits, including medical care, maternity allowances, cash sickness benefits, disability pensions, and funeral grants. Healthcare services are delivered through designated SSB hospitals and clinics, particularly in major urban centers including Yangon and Mandalay.
-            </p>
-            <h6 class="fw-bold">
-                <b>Implementation and challenges</b>
-            </h6>
-            <p class="text-justify">
-                Coverage remains limited to the formal sector, leaving most informal workers outside the scheme. Administrative capacity, awareness, and compliance enforcement have been ongoing challenges. Expansion efforts, including digital registration and pilot programs for informal workers, are gradually extend the protection to a broader labor force.
-            </p>
-            <h6 class="fw-bold">
-                <b>Current role</b>
-            </h6>
-            <p class="text-justify">
-                The Social Security Scheme is Myanmar’s primary state-backed mechanism for worker welfare and risk protection, aligning with national objectives for inclusive social protection and labor rights compliance within the country’s evolving economic framework.
-            </p>
       </div>
     </div>
   </div>
 </div>
+
+@include('partials.medical-classification-tabs')
 
 @endsection
 
