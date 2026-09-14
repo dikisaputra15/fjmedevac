@@ -547,7 +547,7 @@
 </div>
 
 <div class="modal fade" id="policeAreaLayerModal" tabindex="-1" aria-labelledby="policeAreaLayerLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width:800px;">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width:1600px; width:calc(100% - 2rem); margin-left:auto; margin-right:auto;">
     <div class="modal-content">
       <div class="modal-header py-2">
         <div class="d-flex align-items-center gap-2">
@@ -556,25 +556,13 @@
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-        <p class="p-modal text-justify">
-            <strong>1. Strategic Command:</strong> Strategic command is exercised by the MOHA and the Chief of MPF. This level sets policy, force structure, national priorities, command authority, and institutional direction.
-        </p>
-        <p class="p-modal text-justify">
-            <strong>2. Headquarters Command:</strong> Headquarters command is exercised through MPF Headquarters and the two Deputy Chiefs. This level translates strategic direction into administration, policy execution, operational coordination, discipline, training, and national-level supervision.
-        </p>
-        <p class="p-modal text-justify">
-            <strong>3. Functional Command:</strong> Functional command is exercised by national and specialized police departments. These units provide capability in specific mission areas such as investigation, intelligence, border security, narcotics, trafficking, transport security, traffic control, financial crime, and municipal policing.
-        </p>
-        <p class="p-modal text-justify">
-            <strong>4. Territorial Command:</strong> Territorial command is exercised through Nay Pyi Taw, State, Region, District, Township, Police Station, and Police Post layers. This level delivers local law enforcement, public order, incident response, reporting, patrol, investigation, and security presence.
-        </p>
-        <p class="mb-0">
-            <strong>Source:</strong>
-            <a href="https://openjicareport.jica.go.jp/pdf/11821543_03.pdf" target="_blank" rel="noopener noreferrer">
-                JICA Report
-            </a>
-        </p>
+      <div class="modal-body p-0" style="overflow:hidden;">
+        <iframe
+            src="{{ asset('police-area-layer.html') }}"
+            title="Myanmar Police Force — Police Area Layering and Administrative Equivalents"
+            loading="lazy"
+            style="display:block; width:100%; height:80vh; border:0;"
+        ></iframe>
       </div>
     </div>
   </div>
