@@ -1200,7 +1200,7 @@ function addPoliceMarkers(data) {
                             </svg>
                             Get Directions
                         </button>
-                        <a href="${detailUrl}"
+                        <a href="${detailUrl}" target="_blank"
                            style="display:inline-flex;align-items:center;gap:5px;background:#395272;color:#fff;text-decoration:none;padding:5px 12px;border-radius:6px;font-size:12px;font-weight:600;line-height:18px;"
                            onmouseover="this.style.background='#5686c3'"
                            onmouseout="this.style.background='#395272'">
@@ -1213,7 +1213,7 @@ function addPoliceMarkers(data) {
             } else {
                 popupActions = `
                     <div style="margin-top:8px;padding-top:8px;border-top:1px solid #eee;">
-                        <a href="${detailUrl}"
+                        <a href="${detailUrl}" target="_blank"
                            style="display:inline-flex;align-items:center;gap:5px;background:#395272;color:#fff;text-decoration:none;padding:5px 12px;border-radius:6px;font-size:12px;font-weight:600;line-height:18px;"
                            onmouseover="this.style.background='#5686c3'"
                            onmouseout="this.style.background='#395272'">
