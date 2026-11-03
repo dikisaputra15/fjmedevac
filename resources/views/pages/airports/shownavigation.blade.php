@@ -218,7 +218,7 @@
                  <div class="col-md-12">
                     <div class="d-flex justify-content-end align-items-center">
 
-                        <div class="d-flex align-items-center">
+                        <div class="d-flex flex-wrap justify-content-end align-items-center">
 
                             <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#level6Modal">
                                 <img src="https://pg.concordreview.com/wp-content/uploads/2024/10/International-Airport.png" style="width:18px; height:18px;">
@@ -395,6 +395,13 @@
         // Data bandara terdekat (dari controller)
         const nearbyAirports = @json($nearbyAirports);
         const radiusKm = {{ $radius_km }};
+        const mainAirportLocation = L.latLng(Number(airportData.latitude), Number(airportData.longitude));
+
+        // Keep airports across the date line on the same world copy as the main airport.
+        function nearbyLocation(latitude, longitude) {
+            const lng = Number(longitude);
+            return L.latLng(Number(latitude), lng + 360 * Math.round((mainAirportLocation.lng - lng) / 360));
+        }
 
         let map;
         let mainAirportMarker;
@@ -419,7 +426,7 @@
         function initializeMap() {
             map = L.map('map', {
                 fullscreenControl: true
-            }).setView([airportData.latitude, airportData.longitude], 12);
+            }).setView(mainAirportLocation, 6);
 
             const osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; OpenStreetMap contributors',
@@ -443,12 +450,11 @@
         }
 
         function addMainAirportAndCircle() {
-            mainAirportMarker = L.marker([airportData.latitude, airportData.longitude], { icon: mainAirportIcon })
+            mainAirportMarker = L.marker(mainAirportLocation, { icon: mainAirportIcon })
                 .addTo(map)
-                .bindPopup(`<b>${airportData.name}</b><br>This is the main airport.`)
-                .openPopup();
+                .bindPopup(`<b>${airportData.name}</b><br>This is the main airport.`);
 
-            radiusCircle = L.circle([airportData.latitude, airportData.longitude], {
+            radiusCircle = L.circle(mainAirportLocation, {
                 color: 'red',
                 fillColor: '#f03',
                 fillOpacity: 0.1,
@@ -469,7 +475,7 @@
                 const detailUrl = `/airports/${item.id}/detail`;
                 const distance = item.distance ? `<br><strong>Distance:</strong> ${item.distance.toFixed(2)} km` : '';
 
-                const marker = L.marker([item.latitude, item.longitude], { icon: itemIcon })
+                const marker = L.marker(nearbyLocation(item.latitude, item.longitude), { icon: itemIcon })
                     .bindPopup(`
                         <b><a href="${detailUrl}">${name}</a></b> (Airport)<br>
                         ${distance}<br>
@@ -483,9 +489,12 @@
         }
 
         function fitMapToBounds() {
-            const bounds = L.featureGroup([mainAirportMarker, nearbyMarkersGroup, radiusCircle]).getBounds();
+            // Frame the 500 km search area, not markers spanning opposite sides of the date line.
+            const bounds = radiusCircle.getBounds();
             if (bounds.isValid()) {
-                map.fitBounds(bounds, { padding: [50, 50] });
+                map.invalidateSize({ pan: false });
+                map.fitBounds(bounds, { padding: [50, 50], animate: false });
+                mainAirportMarker.openPopup();
             }
         }
 
