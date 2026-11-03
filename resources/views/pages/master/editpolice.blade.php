@@ -22,7 +22,7 @@
 
          <div class="col-md-12">
             <div class="form-group">
-                <label>Edit Region / State</label>
+                <label>Edit Division</label>
                 <select class="form-control" name="province_id" id="province">
                     <?php
                         foreach ($provinces as $prov) {
@@ -44,7 +44,7 @@
 
          <div class="col-md-12">
             <div class="form-group">
-                <label>Edit District</label>
+                <label>Edit Province</label>
                 <select class="form-control" name="city" id="city">
                     <?php
                         foreach ($districts as $district) {
@@ -66,7 +66,7 @@
 
          <div class="col-md-12">
             <div class="form-group">
-                <label>Edit Township</label>
+                <label>Edit Tikina / district</label>
                 <select class="form-control" name="district_id" id="district">
                     <?php
                         foreach ($cities as $city) {
@@ -153,37 +153,26 @@
                     <label>National Police (HQ)</label>
                 </div>
 
-                <div class="form-check form-check-inline police-option {{ $police->category == 'State / Region Police Command' ? 'selected' : '' }}">
+                <div class="form-check form-check-inline police-option {{ $police->category == 'Province / Territory' ? 'selected' : '' }}">
                     <input class="form-check-input category-radio"
                         type="radio"
                         name="category"
-                        value="State / Region Police Command"
+                        value="Province / Territory"
                         data-icon="{{ asset('images/Layer2.png') }}"
-                        {{ $police->category == 'State / Region Police Command' ? 'checked' : '' }}>
+                        {{ $police->category == 'Province / Territory' ? 'checked' : '' }}>
                     <img src="{{ asset('images/Layer2.png') }}" width="16">
-                    <label>State / Region Police Command</label>
+                    <label>Province / Territory</label>
                 </div>
 
-                <div class="form-check form-check-inline police-option {{ $police->category == 'District Police Command' ? 'selected' : '' }}">
+                <div class="form-check form-check-inline police-option {{ $police->category == 'Municipality / Locality' ? 'selected' : '' }}">
                     <input class="form-check-input category-radio"
                         type="radio"
                         name="category"
-                        value="District Police Command"
+                        value="Municipality / Locality"
                         data-icon="{{ asset('images/Layer3.png') }}"
-                        {{ $police->category == 'District Police Command' ? 'checked' : '' }}>
+                        {{ $police->category == 'Municipality / Locality' ? 'checked' : '' }}>
                     <img src="{{ asset('images/Layer3.png') }}" width="16">
-                    <label>District Police Command</label>
-                </div>
-
-                <div class="form-check form-check-inline police-option {{ $police->category == 'Township Police Station' ? 'selected' : '' }}">
-                    <input class="form-check-input category-radio"
-                        type="radio"
-                        name="category"
-                        value="Township Police Station"
-                        data-icon="{{ asset('images/Layer4.png') }}"
-                        {{ $police->category == 'Township Police Station' ? 'checked' : '' }}>
-                    <img src="{{ asset('images/Layer4.png') }}" width="16">
-                    <label>Township Police Station</label>
+                    <label>Municipality / Locality</label>
                 </div>
 
             </div>
@@ -394,14 +383,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 url: '/get-districts/' + cityID,
                 type: 'GET',
                 success: function (data) {
-                    $('#district').empty().append('<option value="">-Choose Township-</option>');
+                    $('#district').empty().append('<option value="">-Choose Tikina / district-</option>');
                     $.each(data, function (key, district) {
                         $('#district').append('<option value="'+ district.id +'">'+ district.city +'</option>');
                     });
                 }
             });
         } else {
-            $('#district').html('<option value="">-Choose Township-</option>');
+            $('#district').html('<option value="">-Choose Tikina / district-</option>');
         }
     });
 </script>

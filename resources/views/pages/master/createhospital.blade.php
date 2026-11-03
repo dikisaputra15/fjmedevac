@@ -22,7 +22,7 @@
 
          <div class="col-md-12">
             <div class="form-group">
-                <label>Region / State</label>
+                <label>Division</label>
                 <select class="form-control" name="province_id" id="province">
                         <option value="0">-Choosse Region / State-</option>
                     @foreach($provinces as $prov)
@@ -34,18 +34,18 @@
 
         <div class="col-md-12">
             <div class="form-group">
-                <label for="city">District</label>
+                <label for="city">Province</label>
                 <select name="city" id="city" class="form-control">
-                    <option value="">-Choosse District-</option>
+                    <option value="">-Choosse Province-</option>
                 </select>
             </div>
         </div>
 
         <div class="col-md-12">
             <div class="form-group">
-                <label>Township</label>
+                <label>Tikina / district</label>
                 <select name="district_id" id="district" class="form-control">
-                    <option value="">-Choose Township-</option>
+                    <option value="">-Choose Tikina / district-</option>
                 </select>
             </div>
         </div>
@@ -71,37 +71,21 @@
         </div>
 
        <div class="col-md-12">
-        <div class="form-group">
-            <label>Facility Level</label>
-            <select class="form-control" name="facility_level">
-
-                <optgroup label="Public">
-                    <option value="Tertiary">
-                        Tertiary
+            <div class="form-group">
+                <label>Facility Level</label>
+                <select class="form-control" name="facility_level">
+                    <option value="Divisional Hospitals">
+                        Divisional Hospitals
                     </option>
-                    <option value="Secondary">
-                        Secondary
+                    <option value="Sub-Divisional Hospitals">
+                        Sub-Divisional Hospitals
                     </option>
-                    <option value="Primary">
-                        Primary
+                    <option value="Clinic / Health Centre">
+                        Clinic / Health Centre
                     </option>
-                </optgroup>
-
-                <optgroup label="Private">
-                    <option value="Large Private">
-                        Large Private
-                    </option>
-                    <option value="Medium Private">
-                        Medium Private
-                    </option>
-                    <option value="Small Private">
-                        Small Private
-                    </option>
-                </optgroup>
-
-            </select>
+                </select>
+            </div>
         </div>
-    </div>
 
          <div class="col-md-12">
             <div class="form-group">
@@ -126,73 +110,13 @@
         </div>
 
          <div class="col-md-12">
-    <div class="form-group">
-        <label class="fw-bold">Icon</label>
-        <!-- GOVERNMENT -->
-            <div class="card-body">
-                <strong>Public :</strong>
-                <div class="form-check mb-2">
-                    <input class="form-check-input" type="radio" name="icon"
-                        value="https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital-pin-red.png">
-                    <label class="form-check-label">
-                        <img src="https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital-pin-red.png" style="width:24px; height:24px;">
-                        Tertiary
-                    </label>
-                </div>
-
-                <div class="form-check mb-2">
-                    <input class="form-check-input" type="radio" name="icon"
-                        value="https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital_pin-purple.png">
-                    <label class="form-check-label">
-                        <img src="https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital_pin-purple.png" style="width:24px; height:24px;">
-                        Secondary
-                    </label>
-                </div>
-
-                <div class="form-check mb-2">
-                    <input class="form-check-input" type="radio" name="icon"
-                        value="https://id.concordreview.com/wp-content/uploads/2026/02/hospital_pin-orange.png">
-                    <label class="form-check-label">
-                        <img src="https://id.concordreview.com/wp-content/uploads/2026/02/hospital_pin-orange.png" style="width:24px; height:24px;">
-                        Primary
-                    </label>
-                </div>
-
+            <div class="form-group">
+                <label>Icon</label><br>
+                <input type="radio" name="icon" value="https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital-pin-red.png"><img src="https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital-pin-red.png" style="width:24; height:24;"> Divisional Hospitals
+                <input type="radio" name="icon" value="https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital_pin-blue.png"><img src="https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital_pin-blue.png" style="width:24; height:24;"> Sub-Divisional Hospitals
+                <input type="radio" name="icon" value="https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital_pin-green.png"><img src="https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital_pin-green.png" style="width:24; height:24;"> Clinic / Health Centre
+            </div>
         </div>
-
-        <!-- PRIVATE -->
-        <div class="card-body">
-                <strong>Private :</strong>
-                <div class="form-check mb-2">
-                    <input class="form-check-input" type="radio" name="icon"
-                        value="https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital_pin-blue.png">
-                    <label class="form-check-label">
-                        <img src="https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital_pin-blue.png" style="width:24px; height:24px;">
-                        Large Private
-                    </label>
-                </div>
-
-                <div class="form-check mb-2">
-                    <input class="form-check-input" type="radio" name="icon"
-                        value="https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital_pin-green.png">
-                    <label class="form-check-label">
-                        <img src="https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital_pin-green.png" style="width:24px; height:24px;">
-                        Medium Private
-                    </label>
-                </div>
-
-                <div class="form-check mb-2">
-                    <input class="form-check-input" type="radio" name="icon"
-                        value="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-tosca.png">
-                    <label class="form-check-label">
-                        <img src="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-tosca.png" style="width:24px; height:24px;">
-                        Small Private
-                    </label>
-                </div>
-        </div>
-
-    </div>
-</div>
 
          <div class="col-md-12">
             <div class="form-group">
@@ -1001,14 +925,14 @@
                 url: '/get-districts/' + cityID,
                 type: 'GET',
                 success: function (data) {
-                    $('#district').empty().append('<option value="">-Choose Township-</option>');
+                    $('#district').empty().append('<option value="">-Choose Tikina / district-</option>');
                     $.each(data, function (key, district) {
                         $('#district').append('<option value="'+ district.id +'">'+ district.city +'</option>');
                     });
                 }
             });
         } else {
-            $('#district').html('<option value="">-Choose Township-</option>');
+            $('#district').html('<option value="">-Choose Tikina / district-</option>');
         }
     });
 </script>

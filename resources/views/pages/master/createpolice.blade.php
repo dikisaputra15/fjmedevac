@@ -21,7 +21,7 @@
 
          <div class="col-md-12">
             <div class="form-group">
-                <label>Region / State</label>
+                <label>Division</label>
                 <select class="form-control" name="province_id" id="province">
                         <option value="0">-Choosse Region / State-</option>
                     @foreach($provinces as $prov)
@@ -33,18 +33,18 @@
 
         <div class="col-md-12">
             <div class="form-group">
-                <label for="city">District</label>
+                <label for="city">Province</label>
                 <select name="city" id="city" class="form-control">
-                    <option value="">-Choosse District-</option>
+                    <option value="">-Choosse Province-</option>
                 </select>
             </div>
         </div>
 
         <div class="col-md-12">
             <div class="form-group">
-                <label>Township</label>
+                <label>Tikina / district</label>
                 <select name="district_id" id="district" class="form-control">
-                    <option value="">-Choose Township-</option>
+                    <option value="">-Choose Tikina / district-</option>
                 </select>
             </div>
         </div>
@@ -108,22 +108,17 @@
                 </div>
 
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input category-radio" type="radio" name="category" value="State / Region Police Command" data-icon="{{ asset('images/Layer2.png') }}">
+                    <input class="form-check-input category-radio" type="radio" name="category" value="Province / Territory" data-icon="{{ asset('images/Layer2.png') }}">
                     <img src="{{ asset('images/Layer2.png') }}" style="width:12px; height:12px;">
-                    <label class="form-check-label">State / Region Police Command</label>
+                    <label class="form-check-label">Province / Territory</label>
                 </div>
 
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input category-radio" type="radio" name="category" value="District Police Command" data-icon="{{ asset('images/Layer3.png') }}">
+                    <input class="form-check-input category-radio" type="radio" name="category" value="Municipality / Locality" data-icon="{{ asset('images/Layer3.png') }}">
                     <img src="{{ asset('images/Layer3.png') }}" style="width:12px; height:12px;">
-                    <label class="form-check-label">District Police Command</label>
+                    <label class="form-check-label">Municipality / Locality</label>
                 </div>
 
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input category-radio" type="radio" name="category" value="Township Police Station" data-icon="{{ asset('images/Layer4.png') }}">
-                    <img src="{{ asset('images/Layer4.png') }}" style="width:12px; height:12px;">
-                    <label class="form-check-label">Township Police Station</label>
-                </div>
             </div>
         </div>
 
@@ -314,14 +309,14 @@ document.querySelectorAll('.category-radio').forEach(radio => {
                 url: '/get-districts/' + cityID,
                 type: 'GET',
                 success: function (data) {
-                    $('#district').empty().append('<option value="">-Choose Township-</option>');
+                    $('#district').empty().append('<option value="">-Choose Tikina / district-</option>');
                     $.each(data, function (key, district) {
                         $('#district').append('<option value="'+ district.id +'">'+ district.city +'</option>');
                     });
                 }
             });
         } else {
-            $('#district').html('<option value="">-Choose Township-</option>');
+            $('#district').html('<option value="">-Choose Tikina / district-</option>');
         }
     });
 </script>

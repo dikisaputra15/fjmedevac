@@ -326,12 +326,12 @@
 
                 <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#level5Modal">
                     <img src="{{ asset('images/Layer2.png') }}" style="width:12px; height:12px;">
-                    <small>State / Region Police Command</small>
+                    <small>Province / Territory</small>
                 </button>
 
                 <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#level4Modal">
                     <img src="{{ asset('images/Layer3.png') }}" style="width:12px; height:12px;">
-                    <small>District Police Command</small>
+                    <small>Municipality / Locality</small>
                 </button>
 
                 <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#level3Modal">
@@ -481,7 +481,7 @@
             <b>Administrative Equivalent:</b> State or region (division) government level
         </p>
         <p class="p-modal text-justify">
-            Constitutes the highest territorial command of the MPF in a State or Region, implementing national policing policies while directing all law enforcement, public order, criminal investigation, and administrative activities throughout its jurisdiction. State and regional police force is the principal operational link between MPF Headquarters and subordinate district police commands.
+            Constitutes the highest territorial command of the MPF in a State or Region, implementing national policing policies while directing all law enforcement, public order, criminal investigation, and administrative activities throughout its jurisdiction. State and regional police force is the principal operational link between MPF Headquarters and subordinate Municipality / Localitys.
         </p>
         <p class="p-modal text-justify">
             <b>Responsibilities:</b>
@@ -522,7 +522,7 @@
             <b>Role:</b> Highest commander of the MPF
         </p>
         <p class="p-modal text-justify">
-            Functions as the supreme professional and operational leader of the MPF, exercising overall command, control, and administration of the national police organization under the authority of the MOHA. The Chief is responsible for formulating policing strategies, directing nationwide law enforcement and internal security operations, overseeing organizational management and personnel, coordinating territorial and specialized police commands, and ensuring the implementation of government policies, laws, and public security objectives throughout Myanmar.
+            Functions as the supreme professional and operational leader of the MPF, exercising overall command, control, and administration of the national police organization under the authority of the MOHA. The Chief is responsible for formulating policing strategies, directing nationwide law enforcement and internal security operations, overseeing organizational management and personnel, coordinating territorial and specialized police commands, and ensuring the implementation of government policies, laws, and public security objectives throughout Fiji.
         </p>
         <p class="p-modal text-justify">
             <b>Responsibilities:</b>
@@ -559,7 +559,7 @@
       <div class="modal-body p-0" style="overflow:hidden;">
         <iframe
             src="{{ asset('police-area-layer.html') }}"
-            title="Myanmar Police Force — Police Area Layering and Administrative Equivalents"
+            title="Fiji Police Force — Police Area Layering and Administrative Equivalents"
             loading="lazy"
             style="display:block; width:100%; height:80vh; border:0;"
         ></iframe>
@@ -642,7 +642,7 @@
 <script>
 // === Inisialisasi Peta ===
 const map = new google.maps.Map(document.getElementById('map'), {
-    center: { lat: 21.9162, lng: 95.9560 },
+    center: { lat: -17.7134, lng: 178.0650 },
     zoom: 5,
     mapTypeId: 'roadmap',
     mapTypeControl: true,
@@ -1175,7 +1175,7 @@ function addPoliceMarkers(data) {
                 ${police.location || 'N/A'}
                 ${police.city_name || 'N/A'}
                 ${police.district_name || 'N/A'}
-                ${police.province_name || 'N/A'}, Myanmar<br>
+                ${police.province_name || 'N/A'}, Fiji<br>
             <strong>Phone:</strong> ${police.telephone || 'N/A'}<br>
             <strong>Website:</strong> ${police.website || 'N/A'}<br>
         `;
@@ -1340,8 +1340,8 @@ combinedPanelDiv.innerHTML = `
             <label>Category:</label>
             ${[
                 'National Police (HQ)',
-                'State / Region Police Command',
-                'District Police Command',
+                'Province / Territory',
+                'Municipality / Locality',
                 'Township Police Station',
             ].map(c => `
             <label style="display:block;font-size:13px;margin-bottom:5px;">
